@@ -1,0 +1,12 @@
+- name: "Install and configure Xorg"
+  ansible.builtin.include_role:
+    name: ans_role_config_xorg
+
+- name: "Install main window manager packages for Arch Linux"
+  ansible.builtin.include_tasks: archlinux/main.yml
+  when: ansible_os_family == "Archlinux"
+
+- name: "Install main window manager packages for FreeBSD"
+  ansible.builtin.include_tasks: freebsd/main.yml
+  when: ansible_os_family == "FreeBSD"
+
