@@ -1,0 +1,3 @@
+# enable an icon for wifi signal in the i3bar tray
+enable_wifi_signal_tray_icon: false
+
