@@ -1,3 +1,3 @@
 - name: "Install Xorg and main window manager packages"
-  ansible.builtin.include_tasks: install_xorg_wm/main.yml
+  ansible.builtin.include_tasks: install_wm/main.yml
 
