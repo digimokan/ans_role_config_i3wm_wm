@@ -9,6 +9,7 @@ Install and configure the i3wm window manager.
 
 * [Purpose](#purpose)
 * [Supported Operating Systems](#supported-operating-systems)
+* [Requirements](#requirements)
 * [Quick Start](#quick-start)
     * [Use From Playbook](#use-from-playbook)
 * [Role Options](#role-options)
@@ -25,6 +26,12 @@ Install and configure the i3wm window manager.
 
 * Arch Linux.
 * FreeBSD.
+
+## Requirements
+
+* Xorg components have been installed.
+* System and user `.Xresources`, `.Xmodmap`, `.xinitrc.d/` scripts, and
+  `.xprofile` will all be read on Xorg start.
 
 ## Quick Start
 
