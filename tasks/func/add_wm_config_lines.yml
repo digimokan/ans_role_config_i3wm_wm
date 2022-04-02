@@ -1,0 +1,16 @@
+- name: "Configure '{{ main_wm_config_path }}': {{ descrip }}"
+  ansible.builtin.blockinfile:
+    path: "{{ main_wm_config_path }}"
+    insertbefore: EOF
+    block: "{{ config_lines }}"
+    marker: "{{ '\n' if leading_newline else '' }}# {mark} ANSIBLE MANAGED BLOCK: {{ descrip }}\n"
+    owner: "{{ user_name }}"
+    mode: "{{ main_wm_config_permissions }}"
+    create: yes
+    state: present
+    validate: "{{ main_wm_config_validate }}"
+  vars:
+    leading_newline: true
+  become: true
+  become_user: root
+

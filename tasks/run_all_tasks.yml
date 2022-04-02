@@ -1,0 +1,6 @@
+- name: "Install main i3 window manager packages"
+  ansible.builtin.include_tasks: install_wm/main.yml
+
+- name: "Configure the core i3 window manager"
+  ansible.builtin.include_tasks: config_wm/main.yml
+

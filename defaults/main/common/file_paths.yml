@@ -1,0 +1,9 @@
+# main user-specific i3wm config file path
+main_wm_config_path: "/home/{{ user_name }}/.config/i3/config"
+
+# main user-specific i3wm config file permissions
+main_wm_config_permissions: '644'
+
+# main user-specific i3wm config file permissions
+main_wm_config_validate: "i3 -c %s"
+
