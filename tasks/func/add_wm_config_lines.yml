@@ -8,7 +8,6 @@
     mode: "{{ main_wm_config_permissions }}"
     create: yes
     state: present
-    validate: "{{ main_wm_config_validate }}"
   vars:
     leading_newline: true
   become: true
