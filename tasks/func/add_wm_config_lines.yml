@@ -4,9 +4,10 @@
     insertbefore: EOF
     block: "{{ config_lines }}"
     # marker: "{{ '\n' if leading_newline else '' }}# {mark} ANSIBLE MANAGED BLOCK: {{ descrip }}"
-    marker: "# ANSIBLE MANAGED BLOCK: '{{ descrip }}' - {mark}"
-    marker_begin: "BEGIN"
-    marker_end: "END\n"
+    # marker: "# ANSIBLE MANAGED BLOCK: '{{ descrip }}' - {mark}"
+    # marker_begin: "BEGIN"
+    # marker_end: "END\n"
+    marker: "\n# {mark} ANSIBLE MANAGED BLOCK: {{ descrip }}"
     owner: "{{ user_name }}"
     mode: "{{ main_wm_config_permissions }}"
     create: yes
@@ -15,4 +16,11 @@
     # leading_newline: true
   become: true
   become_user: root
+
+# - name: "Add newlines between block in {{ main_wm_config_path }}, for readability"
+#   ansible.builtin.replace:
+#     dest: "{{ main_wm_config_path }}"
+#     regexp: '(?smx) (?<!\n\n) ^ (foobar)$'
+#     regexp: 'ANSIBLE MANAGED BLOCK: ([^\n]*)(?\n\n)^(foobar)$'
+#     replace: "\n\\1"
 
