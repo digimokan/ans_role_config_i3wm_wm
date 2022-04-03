@@ -2,12 +2,10 @@
   ansible.builtin.blockinfile:
     path: "{{ main_wm_config_path }}"
     insertbefore: EOF
-    block: |
-      <<<<<<<<<<<<<<<<<<<<<<<< ANSIBLE-MANAGED CONFIG SECTION >>>>>>>>>>>>>>>>>>>>>>>>
-      {{ config_lines }}
-    marker: "# {mark} Block: {{ descrip }}"
-    marker_begin: "Begin"
-    marker_end: "End"
+    block: "{{ config_lines }}"
+    marker: "# <<<<<<<<<< {mark} ANSIBLE BLOCK: {{ descrip }} >>>>>>>>>>"
+    marker_begin: "BEGIN"
+    marker_end: "END"
     owner: "{{ user_name }}"
     mode: "{{ main_wm_config_permissions }}"
     create: yes
