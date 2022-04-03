@@ -4,8 +4,8 @@
     insertbefore: EOF
     block: |
       <<<<<<<<<<<<<<<<<<<<<<<< ANSIBLE-MANAGED CONFIG SECTION >>>>>>>>>>>>>>>>>>>>>>>>
-      "{{ config_lines }}"
-    marker: "# {mark} Ansible-Managed Block: {{ descrip }}"
+      {{ config_lines }}
+    marker: "# {mark} Block: {{ descrip }}"
     marker_begin: "Begin"
     marker_end: "End"
     owner: "{{ user_name }}"
