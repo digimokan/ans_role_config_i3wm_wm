@@ -4,9 +4,9 @@
     insertbefore: EOF
     block: "{{ config_lines }}"
     # marker: "{{ '\n' if leading_newline else '' }}# {mark} ANSIBLE MANAGED BLOCK: {{ descrip }}"
-    marker: "# {mark}"
-    marker_begin: "BEGIN ANSIBLE MANAGED BLOCK: {{ descrip }}"
-    marker_end: "END ANSIBLE MANAGED BLOCK: {{ descrip }}\n"
+    marker: "# ANSIBLE MANAGED BLOCK: '{{ descrip }}' - {mark}"
+    marker_begin: "BEGIN"
+    marker_end: "END\n"
     owner: "{{ user_name }}"
     mode: "{{ main_wm_config_permissions }}"
     create: yes
