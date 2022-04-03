@@ -13,8 +13,7 @@
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
     descrip: 'main WM config file leading comment block'
-    # leading_newline: false
-    config_lines: |
+    config_lines: |-
       # vim: set filetype=conf:
       # ANSIBLE-MANAGED CONFIGURATION FILE
       # System default config (not used; overriden by this config file):
@@ -26,7 +25,6 @@
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
     descrip: 'second test comment block'
-    # leading_newline: false
-    config_lines: |
+    config_lines: |-
       # these are some test config lines
 
