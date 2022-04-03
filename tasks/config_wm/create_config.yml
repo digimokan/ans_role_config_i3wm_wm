@@ -12,18 +12,11 @@
 - name: "Add leading comment block to main WM config file"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
-    descrip: 'CONFIG FILE PURPOSE/SOURCE'
+    descrip: 'Config File Purpose/Source'
     config_lines: |
       # vim: set filetype=conf:
       # System default config (not used; overriden by this config file):
       #   {{ system_default_config_path }}
       # Upstream config source:
       #   https://github.com/i3/i3/blob/next/etc/config
-
-- name: "Add second TEST comment block"
-  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
-  vars:
-    descrip: 'SECOND TEST COMMENT BLOCK'
-    config_lines: |
-      # these are some test config lines
 

@@ -4,8 +4,8 @@
     insertbefore: EOF
     block: "{{ config_lines }}"
     marker: "# <<<<<<<<<< {mark} ANSIBLE BLOCK: {{ descrip }} >>>>>>>>>>"
-    marker_begin: "BEGIN"
-    marker_end: "END"
+    marker_begin: "LEAD"
+    marker_end: "TERM"
     owner: "{{ user_name }}"
     mode: "{{ main_wm_config_permissions }}"
     create: yes
