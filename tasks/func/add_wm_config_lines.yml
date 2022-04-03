@@ -2,25 +2,16 @@
   ansible.builtin.blockinfile:
     path: "{{ main_wm_config_path }}"
     insertbefore: EOF
-    block: "{{ config_lines }}"
-    # marker: "{{ '\n' if leading_newline else '' }}# {mark} ANSIBLE MANAGED BLOCK: {{ descrip }}"
-    # marker: "# ANSIBLE MANAGED BLOCK: '{{ descrip }}' - {mark}"
-    # marker_begin: "BEGIN"
-    # marker_end: "END\n"
-    marker: "\n# {mark} ANSIBLE MANAGED BLOCK: {{ descrip }}"
+    block: |
+      <<<<<<<<<<<<<<<<<<<<<<<< ANSIBLE-MANAGED CONFIG SECTION >>>>>>>>>>>>>>>>>>>>>>>>
+      "{{ config_lines }}"
+    marker: "# {mark} Ansible-Managed Block: {{ descrip }}"
+    marker_begin: "Begin"
+    marker_end: "End"
     owner: "{{ user_name }}"
     mode: "{{ main_wm_config_permissions }}"
     create: yes
     state: present
-  # vars:
-    # leading_newline: true
   become: true
   become_user: root
-
-# - name: "Add newlines between block in {{ main_wm_config_path }}, for readability"
-#   ansible.builtin.replace:
-#     dest: "{{ main_wm_config_path }}"
-#     regexp: '(?smx) (?<!\n\n) ^ (foobar)$'
-#     regexp: 'ANSIBLE MANAGED BLOCK: ([^\n]*)(?\n\n)^(foobar)$'
-#     replace: "\n\\1"
 
