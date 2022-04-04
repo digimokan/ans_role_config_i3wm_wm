@@ -1,3 +1,6 @@
 - name: "Create the i3 WM user-specific config file, and add leading comment"
   ansible.builtin.include_tasks: create_config.yml
 
+- name: "Configure main WM fonts"
+  ansible.builtin.include_tasks: fonts.yml
+

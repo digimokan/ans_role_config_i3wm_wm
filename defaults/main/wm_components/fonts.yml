@@ -1,0 +1,6 @@
+# font family and size for window titles
+window_titles_font: "monospace 10"
+
+# font family and size for the top status bar
+status_bar_font: "monospace 10"
+
