@@ -4,3 +4,6 @@
 - name: "Configure main WM fonts"
   ansible.builtin.include_tasks: fonts.yml
 
+- name: "Configure WM compositor"
+  ansible.builtin.include_tasks: compositor.yml
+

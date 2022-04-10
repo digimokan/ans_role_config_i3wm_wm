@@ -29,9 +29,17 @@ Install and configure the i3wm window manager.
 
 ## Requirements
 
-* Xorg components have been installed.
+### Must Be Installed And Configured Separate From This Role
+
+* All Xorg components.
 * System and user `.Xresources`, `.Xmodmap`, `.xinitrc.d/` scripts, and
-  `.xprofile` will all be read on Xorg start.
+  `.xprofile` are configured to be read on Xorg start.
+* An optional compositor (`compton`, `picom`, etc) (see
+  [defaults](../defaults/main/wm_components/compositor.yml)).
+
+### Installed Automatically By This Role
+
+* [feh](https://github.com/derf/feh), for displaying a background image.
 
 ## Quick Start
 

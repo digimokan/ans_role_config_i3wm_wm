@@ -1,0 +1,9 @@
+- name: "Set compositor command to '{{ task_descrip }}'"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    task_descrip: "{{ start_compositor_cmd if (start_compositor_cmd) else 'disabled' }}"
+    descrip: 'Start-Compositor Command'
+    config_lines: |
+      exec --no-startup-id "{{ start_compositor_cmd }}"
+    block_state: "{{ 'present' if (start_compositor_cmd) else 'absent' }}"
+

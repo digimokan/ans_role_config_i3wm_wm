@@ -9,7 +9,9 @@
     owner: "{{ user_name }}"
     mode: "{{ main_wm_config_permissions }}"
     create: yes
-    state: present
+    state: "{{ block_state }}"
+  vars:
+    block_state: present
   become: true
   become_user: root
 
