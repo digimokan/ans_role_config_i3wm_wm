@@ -4,6 +4,6 @@
     task_descrip: "{{ start_compositor_cmd if (start_compositor_cmd) else 'disabled' }}"
     descrip: 'Start-Compositor Command'
     config_lines: |
-      exec --no-startup-id "{{ start_compositor_cmd }}"
+      exec_always --no-startup-id "{{ start_compositor_cmd }}"
     block_state: "{{ 'present' if (start_compositor_cmd) else 'absent' }}"
 

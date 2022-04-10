@@ -1,0 +1,6 @@
+# path where default bg image (files/i3_bg_wallpaper.jpg) is stored
+default_bg_wallpaper_path: "/home/{{ user_name }}/.config/i3/bg_wallpaper.jpg"
+
+# path to active background wallpaper
+active_bg_wallpaper_path: "{{ default_bg_wallpaper_path }}"
+

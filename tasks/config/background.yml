@@ -1,0 +1,17 @@
+- name: "Store default background image at '{{ default_bg_wallpaper_path }}'"
+  ansible.builtin.copy:
+    dest: "{{ default_bg_wallpaper_path }}"
+    src: 'i3_bg_wallpaper.jpg'
+    owner: "{{ user_name }}"
+    mode: '666'
+    force: yes
+  become: true
+  become_user: root
+
+- name: "Display the background wallpaper from '{{ active_bg_wallpaper_path }}'"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Display Background Wallpaper'
+    config_lines: |
+      exec_always --no-startup-id "feh --no-fehbg --bg-scale '{{ active_bg_wallpaper_path }}'"
+
