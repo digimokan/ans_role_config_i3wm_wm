@@ -19,6 +19,6 @@
       #   {{ system_default_config_path }}
       # Upstream config source:
       #   https://github.com/i3/i3/blob/next/etc/config
-      # Version spec required for newer i3 versions to start properly:
-      #   i3 config file (v4)
+      # Exact version line required for newer i3 versions to start properly:
+      # i3 config file (v4)
 
