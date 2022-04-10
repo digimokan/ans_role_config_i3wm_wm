@@ -19,3 +19,10 @@
   become: true
   become_user: root
 
+- name: "Install 'feh' package, for displaying a background image"
+  ansible.builtin.package:
+    name: feh
+    state: present
+  become: true
+  become_user: root
+
