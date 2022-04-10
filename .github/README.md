@@ -31,11 +31,12 @@ Install and configure the i3wm window manager.
 
 ### Must Be Installed And Configured Separate From This Role
 
-* All Xorg components.
+* All core Xorg server components.
 * System and user `.Xresources`, `.Xmodmap`, `.xinitrc.d/` scripts, and
   `.xprofile` are configured to be read on Xorg start.
-* An optional compositor (`compton`, `picom`, etc) (see
-  [defaults](../defaults/main/wm_components/compositor.yml)).
+* An optional compositor (`compton`, `picom`, etc) - see
+  [defaults](../defaults/main/wm_components/compositor.yml).
+* Fonts specified in [defaults](../defaults/main/wm_components/fonts.yml).
 
 ### Installed Automatically By This Role
 
