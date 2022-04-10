@@ -1,0 +1,6 @@
+# separator between elements on right half of status bar
+status_bar_separator_symbol: '│'
+
+# position of status bar ('top' or 'bottom')
+status_bar_position: 'top'
+

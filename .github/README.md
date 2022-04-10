@@ -41,6 +41,8 @@ Install and configure the i3wm window manager.
 
 ### Installed Automatically By This Role
 
+* [i3blocks](https://github.com/vivien/i3blocks), to use as the i3 status bar.
+* [i3lock](https://github.com/i3/i3lock), to use as the i3 screen locker.
 * [feh](https://github.com/derf/feh), for displaying a background image.
 
 ## Quick Start

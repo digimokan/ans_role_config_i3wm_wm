@@ -1,0 +1,32 @@
+- name: "Configure all i3bar status bar settings"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'i3bar Status Bar'
+    config_lines: |
+      bar {
+        status_command i3blocks
+        font pango: {{ status_bar_font }}
+        separator_symbol "{{ status_bar_separator_symbol }}"
+        colors {
+          # Define Colors Exclusive To i3bar
+          set $bar-bg-color           #292C33
+          set $worksp-bd-color        #005E68
+          set $wksp-inact-bg-color    #1F1F1F
+          set $status-text-color      #B9B9BA
+          set $status-separator-color #007C8A
+          # Basic Statusbar Text Color
+          statusline $status-text-color
+          # Set Bar Background Color (Affects Workspace Blocks + Statusline Blocks)
+          background $bar-bg-color
+          # Set Border / Background / Text Color For Workspace Blocks
+          # Workspace-Type   Border-Color       Background-Color      Text-Color
+          ################   ############       ################      ##########
+          focused_workspace  $worksp-bd-color   $bar-bg-color         $status-text-color
+          inactive_workspace $worksp-bd-color   $wksp-inact-bg-color  $inactive-text-color
+          urgent_workspace   $worksp-bd-color   $urgent-bg-color      $text-color
+          # Separator Between Elements Color
+          separator $status-separator-color
+        }
+        position {{ status_bar_position }}
+      }
+
