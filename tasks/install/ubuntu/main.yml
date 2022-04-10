@@ -1,0 +1,21 @@
+- name: "Install 'i3-wm' package, for core window manager"
+  ansible.builtin.package:
+    name: i3-wm
+    state: present
+  become: true
+  become_user: root
+
+- name: "Install 'i3blocks' package, an add-on utility for i3bar tray items"
+  ansible.builtin.package:
+    name: i3blocks
+    state: present
+  become: true
+  become_user: root
+
+- name: "Install 'i3lock' package, an i3-supported screen locker"
+  ansible.builtin.package:
+    name: i3lock
+    state: present
+  become: true
+  become_user: root
+

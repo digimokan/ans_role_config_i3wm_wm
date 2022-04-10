@@ -24,6 +24,7 @@ Install and configure the i3wm window manager.
 
 ## Supported Operating Systems
 
+* Ubuntu focal (20.04), hirsute (21.04), impish (21.10)
 * Arch Linux.
 * FreeBSD.
 

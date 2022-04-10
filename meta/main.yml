@@ -4,6 +4,11 @@ galaxy_info:
   license: "MIT"
   min_ansible_version: 2.7
   platforms:
+    - name: Ubuntu
+      versions:
+        - focal
+        - hirsute
+        - impish
     - name: Archlinux
       versions:
         - all
