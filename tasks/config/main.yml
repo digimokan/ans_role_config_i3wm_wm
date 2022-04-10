@@ -4,6 +4,9 @@
 - name: "Configure WM compositor"
   ansible.builtin.include_tasks: compositor.yml
 
+- name: "Set main WM fonts "
+  ansible.builtin.include_tasks: fonts.yml
+
 - name: "Set background (wallpaper) image"
   ansible.builtin.include_tasks: background.yml
 
