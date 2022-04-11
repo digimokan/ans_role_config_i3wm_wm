@@ -1,0 +1,4 @@
+# main 'Mod' key to hold when entering keymaps (listed as '$mod' in keymaps)
+# available keys: 'Super', 'Alt'
+main_keymap_mod_key: 'Super'
+

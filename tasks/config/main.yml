@@ -10,9 +10,12 @@
 - name: "Set background (wallpaper) image"
   ansible.builtin.include_tasks: background.yml
 
-- name: "Configure the top/bottom panel bar"
-  ansible.builtin.include_tasks: panel_bar.yml
+- name: "Configure the main keymap 'Mod' key"
+  ansible.builtin.include_tasks: keymap_mod.yml
 
 - name: "Configure workspaces"
   ansible.builtin.include_tasks: workspaces.yml
+
+- name: "Configure the top/bottom panel bar"
+  ansible.builtin.include_tasks: panel_bar.yml
 
