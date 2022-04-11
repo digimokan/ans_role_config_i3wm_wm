@@ -1,6 +1,6 @@
 # font family and size for window titles
 window_titles_font: "Liberation Sans 19"
 
-# font family and size for the top status bar
-status_bar_font: "DejaVu Sans Mono 18"
+# font family and size for the top/bottom panel bar
+panel_bar_font: "DejaVu Sans Mono 18"
 

@@ -1,0 +1,60 @@
+# For primary key in combos, use ALT, Num_Lock, Super, Shift, Control
+# See output of 'xmodmap -pm' for additional key names
+
+# labels for workspaces
+workspace_1_label: '1'
+workspace_2_label: '2'
+workspace_3_label: '3'
+workspace_4_label: '4'
+workspace_5_label: '5'
+workspace_6_label: '6'
+workspace_7_label: '7'
+workspace_8_label: '8'
+workspace_9_label: '9'
+workspace_10_label: 'A'
+workspace_11_label: 'B'
+workspace_12_label: 'C'
+workspace_13_label: 'D'
+workspace_14_label: 'E'
+workspace_15_label: 'F'
+
+# switch to prev workspace on attempt to switch to same workspace twice
+auto_prev_workspace_switch: true
+
+# keymap for switch-to-last-used-workspace
+keymap_switch_to_prev_workspace: 'Super+BackSpace'
+
+# keymaps for "switch to workspace X"
+keymap_switch_to_workspace_1: 'Super+q'
+keymap_switch_to_workspace_2: 'Super+w'
+keymap_switch_to_workspace_3: 'Super+e'
+keymap_switch_to_workspace_4: 'Super+r'
+keymap_switch_to_workspace_5: 'Super+t'
+keymap_switch_to_workspace_6: 'Super+a'
+keymap_switch_to_workspace_7: 'Super+s'
+keymap_switch_to_workspace_8: 'Super+d'
+keymap_switch_to_workspace_9: 'Super+f'
+keymap_switch_to_workspace_10: 'Super+g'
+keymap_switch_to_workspace_11: 'Super+z'
+keymap_switch_to_workspace_12: 'Super+x'
+keymap_switch_to_workspace_13: 'Super+c'
+keymap_switch_to_workspace_14: 'Super+v'
+keymap_switch_to_workspace_15: 'Super+b'
+
+# keymaps for "move currently-focused container to workspace X"
+keymap_move_to_workspace_1: 'Super+Shift+q'
+keymap_move_to_workspace_2: 'Super+Shift+w'
+keymap_move_to_workspace_3: 'Super+Shift+e'
+keymap_move_to_workspace_4: 'Super+Shift+r'
+keymap_move_to_workspace_5: 'Super+Shift+t'
+keymap_move_to_workspace_6: 'Super+Shift+a'
+keymap_move_to_workspace_7: 'Super+Shift+s'
+keymap_move_to_workspace_8: 'Super+Shift+d'
+keymap_move_to_workspace_9: 'Super+Shift+f'
+keymap_move_to_workspace_10: 'Super+Shift+g'
+keymap_move_to_workspace_11: 'Super+Shift+z'
+keymap_move_to_workspace_12: 'Super+Shift+x'
+keymap_move_to_workspace_13: 'Super+Shift+c'
+keymap_move_to_workspace_14: 'Super+Shift+v'
+keymap_move_to_workspace_15: 'Super+Shift+b'
+

@@ -4,12 +4,15 @@
 - name: "Configure WM compositor"
   ansible.builtin.include_tasks: compositor.yml
 
-- name: "Set main WM fonts "
+- name: "Set main WM fonts"
   ansible.builtin.include_tasks: fonts.yml
 
 - name: "Set background (wallpaper) image"
   ansible.builtin.include_tasks: background.yml
 
-- name: "Configure i3bar (the i3 status bar)"
-  ansible.builtin.include_tasks: status_bar.yml
+- name: "Configure the top/bottom panel bar"
+  ansible.builtin.include_tasks: panel_bar.yml
+
+- name: "Configure workspaces"
+  ansible.builtin.include_tasks: workspaces.yml
 

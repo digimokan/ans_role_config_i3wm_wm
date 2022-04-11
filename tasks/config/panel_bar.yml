@@ -1,12 +1,12 @@
-- name: "Configure all i3bar status bar settings"
+- name: "Configure all panel bar (aka 'tray') settings"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
-    descrip: 'i3bar Status Bar'
+    descrip: 'Panel Bar'
     config_lines: |
       bar {
         status_command i3blocks
-        font pango: {{ status_bar_font }}
-        separator_symbol "{{ status_bar_separator_symbol }}"
+        font pango: {{ panel_bar_font }}
+        separator_symbol "{{ panel_bar_separator_symbol }}"
         colors {
           # Define Colors Exclusive To i3bar
           set $bar-bg-color           #292C33
@@ -27,6 +27,6 @@
           # Separator Between Elements Color
           separator $status-separator-color
         }
-        position {{ status_bar_position }}
+        position {{ panel_bar_position }}
       }
 

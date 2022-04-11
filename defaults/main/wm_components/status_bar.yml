@@ -1,6 +1,6 @@
-# separator between elements on right half of status bar
-status_bar_separator_symbol: '│'
+# separator between elements on right half of panel bar
+panel_bar_separator_symbol: '│'
 
-# position of status bar ('top' or 'bottom')
-status_bar_position: 'top'
+# position of panel bar ('top' or 'bottom')
+panel_bar_position: 'top'
 
