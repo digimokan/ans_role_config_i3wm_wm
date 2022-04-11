@@ -1,6 +1,6 @@
 # font family and size for window titles
-window_titles_font: "Liberation Sans 19"
+window_titles_font: "monospace 10"
 
 # font family and size for the top/bottom panel bar
-panel_bar_font: "DejaVu Sans Mono 18"
+panel_bar_font: "monospace 10"
 
