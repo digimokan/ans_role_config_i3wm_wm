@@ -3,7 +3,7 @@
   vars:
     descrip: 'Workspace Labels'
     config_lines: |
-      set $workspace1 "{{ workspace_labelsworkspace_1 }}"
+      set $workspace1 "{{ workspace_labels.workspace_1 }}"
       set $workspace2 "{{ workspace_labels.workspace_2 }}"
       set $workspace3 "{{ workspace_labels.workspace_3 }}"
       set $workspace4 "{{ workspace_labels.workspace_4 }}"
