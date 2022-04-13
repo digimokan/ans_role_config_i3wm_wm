@@ -1,4 +1,4 @@
-- name: "Install '{{ base_windowing_i3bar_pkg_name }}' package, for windowing, and bundled i3bar component"
+- name: "Install '{{ base_windowing_i3bar_pkg_name }}' windowing package, and bundled i3bar component"
   ansible.builtin.package:
     name: "{{ base_windowing_i3bar_pkg_name }}"
     state: present
