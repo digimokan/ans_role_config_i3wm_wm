@@ -32,6 +32,6 @@
     descrip: 'Panel Bar'
     config_lines: |
       bar {
-        {{ i3bar_config_lines | indent(width=2, indentfirst=False) }}
+        {{ i3bar_config_lines | indent(width=2, first=False) }}
       }
 
