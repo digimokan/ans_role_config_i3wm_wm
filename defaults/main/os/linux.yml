@@ -1,3 +1,6 @@
+# name of the minimal/base i3 package which includes windowing + i3bar
+linux_base_windowing_i3bar_pkg_name: 'i3-wm'
+
 # default system i3 config file path
 linux_system_default_config_path: '/etc/i3/config'
 

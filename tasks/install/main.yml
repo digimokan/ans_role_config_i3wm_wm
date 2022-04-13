@@ -1,12 +1,14 @@
-- name: "Install window manager and related packages for Ubuntu"
-  ansible.builtin.include_tasks: ubuntu/main.yml
-  when: ansible_distribution == "Ubuntu"
+- name: "Install '{{ base_windowing_i3bar_pkg_name }}' package, for windowing, and bundled i3bar component"
+  ansible.builtin.package:
+    name: "{{ base_windowing_i3bar_pkg_name }}"
+    state: present
+  become: true
+  become_user: root
 
-- name: "Install window manager and related packages for Arch Linux"
-  ansible.builtin.include_tasks: archlinux/main.yml
-  when: ansible_os_family == "Archlinux"
-
-- name: "Install window manager and related packages for FreeBSD"
-  ansible.builtin.include_tasks: freebsd/main.yml
-  when: ansible_os_family == "FreeBSD"
+- name: "Install 'feh' package, for displaying a background image"
+  ansible.builtin.package:
+    name: feh
+    state: present
+  become: true
+  become_user: root
 

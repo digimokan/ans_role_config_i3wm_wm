@@ -1,3 +1,6 @@
+# name of the minimal/base i3 package which includes windowing + i3bar
+freebsd_base_windowing_i3bar_pkg_name: 'i3'
+
 # default system i3 config file path
 freebsd_system_default_config_path: '/usr/local/etc/i3/config'
 

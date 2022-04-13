@@ -1,4 +1,4 @@
-- name: "Install main i3 window manager packages"
+- name: "Install core i3-windowing, i3bar, and wallpaper-display packages"
   ansible.builtin.include_tasks: install/main.yml
 
 - name: "Configure the core i3 window manager"
