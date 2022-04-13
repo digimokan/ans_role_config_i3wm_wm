@@ -1,6 +1,6 @@
 - name: "Define i3bar config - used only if i3bar specified as panel bar"
   ansible.builtin.set_fact:
-    i3bar_config_lines: |
+    i3bar_config_lines: |-
       status_command i3blocks
       font pango: {{ panel_bar_font }}
       separator_symbol "{{ panel_bar_separator_symbol }}"
