@@ -1,0 +1,4 @@
+# command to run to show a top or bottom panel bar
+# NOTE: i3bar is bundled with the core i3 install
+start_panel_bar_cmd: "i3bar"
+

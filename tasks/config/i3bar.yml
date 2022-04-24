@@ -1,0 +1,22 @@
+- name: "Define i3bar config, for insertion into i3 'bar { }' config section"
+  ansible.builtin.set_fact:
+    i3bar_config_lines: |-
+      status_command {{ i3bar_status_area_cmd }}
+      font pango: {{ i3bar_font }}
+      separator_symbol "{{ i3bar_status_item_separator }}"
+      colors {
+        # Set Bar Background Color (Affects Workspace Items + Status Items)
+        background {{ i3bar_bg_color }}
+        # Set Workspace Item Border / Background / Text Color
+        # Workspace-Type    Border   Bkgrnd   Label
+        ################    #######  #######  #######
+        focused_workspace   {{ i3bar_workspace_colors.item_borders }}  {{ i3bar_workspace_colors.active_bkgnd }}  {{ i3bar_workspace_colors.active_label }}
+        inactive_workspace  {{ i3bar_workspace_colors.item_borders }}  {{ i3bar_workspace_colors.idling_bkgnd }}  {{ i3bar_workspace_colors.idling_label }}
+        urgent_workspace    {{ i3bar_workspace_colors.item_borders }}  {{ i3bar_workspace_colors.urgent_bkgnd }}  {{ i3bar_workspace_colors.urgent_label }}
+        # Status Area Item Color
+        statusline {{ i3bar_status_item_colors.label }}
+        # Status Area Item-Separator Color
+        separator {{ i3bar_status_item_colors.separator }}
+      }
+      position {{ panel_bar_position }}
+

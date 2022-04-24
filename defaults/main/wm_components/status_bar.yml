@@ -1,6 +1,0 @@
-# separator between elements on right half of panel bar
-panel_bar_separator_symbol: '│'
-
-# position of panel bar ('top' or 'bottom')
-panel_bar_position: 'top'
-

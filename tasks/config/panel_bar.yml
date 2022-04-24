@@ -1,30 +1,11 @@
-- name: "Define i3bar config - used only if i3bar specified as panel bar"
+- name: "Define i3bar config, which will be used if i3bar selected as panel bar"
+  ansible.builtin.include_tasks: i3bar.yml
+
+- name: "Use {{ config_selection }} for panel bar config in i3"
   ansible.builtin.set_fact:
-    i3bar_config_lines: |-
-      status_command i3blocks
-      font pango: {{ panel_bar_font }}
-      separator_symbol "{{ panel_bar_separator_symbol }}"
-      colors {
-        # Define Colors Exclusive To i3bar
-        set $bar-bg-color           #292C33
-        set $worksp-bd-color        #005E68
-        set $wksp-inact-bg-color    #1F1F1F
-        set $status-text-color      #B9B9BA
-        set $status-separator-color #007C8A
-        # Basic Statusbar Text Color
-        statusline $status-text-color
-        # Set Bar Background Color (Affects Workspace Blocks + Statusline Blocks)
-        background $bar-bg-color
-        # Set Border / Background / Text Color For Workspace Blocks
-        # Workspace-Type   Border-Color       Background-Color      Text-Color
-        ################   ############       ################      ##########
-        focused_workspace  $worksp-bd-color   $bar-bg-color         $status-text-color
-        inactive_workspace $worksp-bd-color   $wksp-inact-bg-color  $inactive-text-color
-        urgent_workspace   $worksp-bd-color   $urgent-bg-color      $text-color
-        # Separator Between Elements Color
-        separator $status-separator-color
-      }
-      position {{ panel_bar_position }}
+    bar_config: "{{ i3bar_config_lines if (start_panel_bar_cmd == 'i3bar') else '# See external panel bar config....'}}"
+  vars:
+    config_selection: "{{ 'i3bar' if (start_panel_bar_cmd == 'i3bar') else 'start_panel_bar_cmd' }}"
 
 - name: "Configure all panel bar (aka 'tray') settings"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
@@ -32,6 +13,7 @@
     descrip: 'Panel Bar'
     config_lines: |
       bar {
-        {{ i3bar_config_lines | indent(width=2, first=False) }}
+        i3bar_command {{ start_panel_bar_cmd }}
+        {{ bar_config | indent(width=2, first=False) }}
       }
 
