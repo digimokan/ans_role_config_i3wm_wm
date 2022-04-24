@@ -18,5 +18,5 @@
         # Status Area Item-Separator Color
         separator {{ i3bar_status_item_colors.separator }}
       }
-      position {{ panel_bar_position }}
+      position {{ i3bar_position }}
 
