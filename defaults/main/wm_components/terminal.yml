@@ -1,0 +1,6 @@
+# command to run to start the terminal emulator
+start_term_emulator_cmd: 'xterm'
+
+# keymap for launching terminal emulator
+keymap_launch_term_emulator: '$mod+Shift+Delete'
+
