@@ -3,7 +3,7 @@
   vars:
     task_descrip: "{{ start_compositor_cmd if (start_compositor_cmd) else 'disabled' }}"
     descrip: 'Start-Compositor Command'
-    config_lines: |
-      exec_always --no-startup-id "{{ start_compositor_cmd }}"
-    block_state: "{{ 'present' if (start_compositor_cmd) else 'absent' }}"
+    enabled_lines: "exec_always --no-startup-id \"{{ start_compositor_cmd }}\""
+    disabled_lines: '# disabled....'
+    config_lines: "{{ enabled_lines if (start_compositor_cmd) else disabled_lines }}"
 
