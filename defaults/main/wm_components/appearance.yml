@@ -1,0 +1,13 @@
+# colors for windows
+i3wm_window_colors:
+  bg_active: '#2F343F'
+  bg_inactive: '#2F343F'
+  text_active: '#F3F4F5'
+  text_inactive: '#676E7D'
+  urgent_bg: '#AA3935'
+  indicator: '#00FF00'
+
+# Hide Window Edge Borders That Are Adjacent To Screen Edges, Incl Indicator Bar
+# (Indicator Bar Shows Where Next Horiz/Vert Sibling Will Go)
+hide_window_outer_borders: true
+

@@ -10,6 +10,9 @@
 - name: "Set background (wallpaper) image"
   ansible.builtin.include_tasks: background.yml
 
+- name: "Configure window colors and appearance"
+  ansible.builtin.include_tasks: appearance.yml
+
 - name: "Configure the main keymap 'Mod' key"
   ansible.builtin.include_tasks: keymap_mod.yml
 
