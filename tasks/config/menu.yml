@@ -1,0 +1,21 @@
+- name: "Set keymap for launch-application-selection-menu to '{{ keymap_launch_app_menu }}'"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Keymap Launch Application Selection Menu'
+    config_lines: |
+      bindsym {{ keymap_launch_app_menu }} exec "{{ launch_app_menu_cmd }}"
+
+- name: "Set keymap for lock-screen to '{{ lock_screen_cmd }}'"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Keymap Lock Screen'
+    config_lines: |
+      bindsym {{ keymap_lock_screen }} exec --no-startup-id "{{ lock_screen_cmd }}"
+
+- name: "Set keymap for exit-i3wm to '{{ keymap_exit_i3wm }}'"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Keymap Exit i3wm'
+    config_lines: |
+      bindsym {{ keymap_exit_i3wm }} exec "i3-msg exit"
+
