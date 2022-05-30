@@ -6,7 +6,7 @@
       bindsym {{ keymap_container_stacked }} layout stacking
       bindsym {{ keymap_container_tabbed }} layout tabbed
       bindsym {{ keymap_container_tile }} layout toggle split
-      bindsym {{ keymap_toggle_fullscreen }} layout fullscreen toggle
+      bindsym {{ keymap_toggle_fullscreen }} fullscreen toggle
 
 - name: "Set keymaps for containerize window to vertical, horizontal, or h/v toggle"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
