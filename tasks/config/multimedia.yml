@@ -1,0 +1,8 @@
+- name: "Set keymaps for adjusting screen brightness"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Keymaps Adjust Screen Brightness'
+    config_lines: |
+      bindsym {{ keymap_inc_screen_brightness }} exec --no-startup-id {{ cmd_inc_screen_brightness }}
+      bindsym {{ keymap_dec_screen_brightness }} exec --no-startup-id {{ cmd_dec_screen_brightness }}
+

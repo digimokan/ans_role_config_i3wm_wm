@@ -1,0 +1,8 @@
+# commands for adjusting screen brightness
+cmd_inc_screen_brightness: '/usr/bin/false'
+cmd_dec_screen_brightness: '/usr/bin/false'
+
+# keymaps for adjusting screen brightness
+keymap_inc_screen_brightness: '$mod+Shift+k'
+keymap_dec_screen_brightness: '$mod+Shift+j'
+

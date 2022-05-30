@@ -1,7 +1,7 @@
 - name: "Set keymaps for stacked, tabbed, tiling, and fullscreen windows"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
-    descrip: 'Container Layout Stacked, Tabbed, Tiling, Fullscreen'
+    descrip: 'Keymaps Container Layout Stacked, Tabbed, Tiling, Fullscreen'
     config_lines: |
       bindsym {{ keymap_container_stacked }} layout stacking
       bindsym {{ keymap_container_tabbed }} layout tabbed
@@ -11,7 +11,7 @@
 - name: "Set keymaps for containerize window to vertical, horizontal, or h/v toggle"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
-    descrip: 'Containerize Window To Vertical, Horizontal, H/V-Toggle'
+    descrip: 'Keymaps Containerize Window To Vertical, Horizontal, H/V-Toggle'
     config_lines: |
       bindsym {{ keymap_set_tiling_vertical }} split v
       bindsym {{ keymap_set_tiling_horizontal }} split h
@@ -20,7 +20,7 @@
 - name: "Set keymaps for focus on parent or child container"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
-    descrip: 'Focus On Parent/Child Container Of Current Container'
+    descrip: 'Keymaps Focus On Parent/Child Container Of Current Container'
     config_lines: |
       bindsym {{ keymap_focus_parent_container }} focus parent
       bindsym {{ keymap_focus_child_container }} focus child
@@ -28,7 +28,7 @@
 - name: "Set keymap for kill currently-focused window"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
-    descrip: 'Kill Currently-Focused Window'
+    descrip: 'Keymap Kill Currently-Focused Window'
     config_lines: |
       bindsym {{ keymap_kill_focused_window }} kill
 
@@ -45,7 +45,7 @@
 - name: "Set keymaps for move-window Left/Right/Up/Down In Current Container"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
-    descrip: 'Move Window Left/Right/Up/Down In Current Container'
+    descrip: 'Keymaps Move Window Left/Right/Up/Down In Current Container'
     config_lines: |
       bindsym {{ keymap_move_window_up }} move up
       bindsym {{ keymap_move_window_down }} move down
@@ -55,21 +55,21 @@
 - name: "Set keymap for toggle floating/tiling mode of  currently-focused window"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
-    descrip: 'Toggle Floating/Tiling Mode Of Currently-Focused Window'
+    descrip: 'Keymap Toggle Floating/Tiling Mode Of Currently-Focused Window'
     config_lines: |
       bindsym {{ keymap_toggle_window_floating }} floating toggle
 
 - name: "Set keymap for toggle focus between floating/tiling windows"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
-    descrip: 'Toggle Focus Between Floating/Tiling Windows'
+    descrip: 'Keymap Toggle Focus Between Floating/Tiling Windows'
     config_lines: |
       bindsym {{ keymap_toggle_focus_floating }} focus mode_toggle
 
 - name: "Set keymap for resize currently-focused window"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
-    descrip: 'Resize Currently-Focused Window'
+    descrip: 'Keymap Resize Currently-Focused Window'
     config_lines: |
       mode "resize" {
         # These bindings trigger as soon as you enter the resize mode

@@ -28,6 +28,9 @@
 - name: "Configure launching app-menu, locking screen, and quitting i3wm"
   ansible.builtin.include_tasks: menu.yml
 
+- name: "Configure screen brightness, audio control/volume, etc"
+  ansible.builtin.include_tasks: multimedia.yml
+
 - name: "Configure the top/bottom panel bar"
   ansible.builtin.include_tasks: panel_bar.yml
 
