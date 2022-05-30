@@ -13,7 +13,6 @@ Install and configure the i3wm window manager.
 * [Quick Start](#quick-start)
     * [Use From Playbook](#use-from-playbook)
 * [Role Options](#role-options)
-* [Role Dependencies](#role-dependencies)
 * [Contributing](#contributing)
 
 ## Purpose
@@ -30,17 +29,17 @@ Install and configure the i3wm window manager.
 
 ## Requirements
 
-### Must Be Installed And Configured Separate From This Role
+### Must Be Installed And Configured
 
 * All core Xorg server components.
 * System and user `.Xresources`, `.Xmodmap`, `.xinitrc.d/` scripts, and
   `.xprofile` are configured to be read on Xorg start.
-* An optional compositor (`compton`, `picom`, etc) - see
-  [defaults](../defaults/main/wm_components/compositor.yml).
-* Fonts specified in [defaults](../defaults/main/wm_components/fonts.yml).
+* [fonts](../defaults/main/wm_components/fonts.yml).
 
-### Installed Automatically By This Role
+### Optional To Install And Configure
 
+* [compositor](../defaults/main/wm_components/compositor.yml).
+* [terminal emulator](../defaults/main/wm_components/terminal.yml).
 * [i3lock](https://github.com/i3/i3lock), to use as the i3 screen locker.
 * [feh](https://github.com/derf/feh), for displaying a background image.
 
@@ -86,10 +85,6 @@ See the role `defaults` files for main role vars listings:
 Define these _required_ vars for the role:
 
   * `user_name`: name of primary i3wm user to configure the desktop for
-
-## Role Dependencies
-
-* [ans_role_config_xorg](https://github.com/digimokan/ans_role_config_xorg)
 
 ## Contributing
 
