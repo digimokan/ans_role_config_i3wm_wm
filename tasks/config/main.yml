@@ -19,6 +19,9 @@
 - name: "Configure workspaces"
   ansible.builtin.include_tasks: workspaces.yml
 
+- name: "Configure tiling keymaps"
+  ansible.builtin.include_tasks: tiling.yml
+
 - name: "Configure launching a terminal emulator"
   ansible.builtin.include_tasks: terminal.yml
 

@@ -17,5 +17,5 @@
   vars:
     descrip: 'Keymap Exit i3wm'
     config_lines: |
-      bindsym {{ keymap_exit_i3wm }} exec "i3-msg exit"
+      bindsym {{ keymap_exit_i3wm }} exit
 

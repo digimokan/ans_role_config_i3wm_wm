@@ -1,0 +1,40 @@
+# change container layout to stacked, tabbed, toggle-v/h-tile, or fullscreen
+keymap_container_stacked: '$mod+o'
+keymap_container_tabbed: '$mod+u'
+keymap_container_tile: '$mod+i'
+keymap_toggle_fullscreen: '$mod+y'
+
+# create parent container node and make current window its child, and make the
+# container's (new) windows oriented vertically/horizontally/toggle
+keymap_set_tiling_vertical: '$mod+Control+v'
+keymap_set_tiling_horizontal: '$mod+Control+s'
+keymap_set_tiling_toggle: '$mod+Control+t'
+
+# focus on parent/child container of current >>container<<
+keymap_focus_parent_container: '$mod+comma'
+keymap_focus_child_container: '$mod+period'
+
+# kill currently focused window
+keymap_kill_focused_window: '$mod+Tab'
+
+# focus to window in current worksp (directionally, >>across<< containers)
+keymap_focus_up: '$mod+k'
+keymap_focus_down: '$mod+j'
+keymap_focus_left: '$mod+h'
+keymap_focus_right: '$mod+l'
+
+# move (i.e. reposition) focused window directionally inside/across containers
+keymap_move_window_up: '$mod+Up'
+keymap_move_window_down: '$mod+Down'
+keymap_move_window_left: '$mod+Left'
+keymap_move_window_right: '$mod+Right'
+
+# enter/exit floating mode for currently focused window
+keymap_toggle_window_floating: '$mod+m'
+
+# change focus between tiling / floating windows
+keymap_toggle_focus_floating: '$mod+n'
+
+# resize window (you can also use the mouse for this)
+keymap_resize_window: '$mod+equal'
+
