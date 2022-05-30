@@ -40,7 +40,7 @@ Install and configure the i3wm window manager.
 
 * [compositor](../defaults/main/wm_components/compositor.yml).
 * [terminal emulator](../defaults/main/wm_components/terminal.yml).
-* [i3lock](https://github.com/i3/i3lock), to use as the i3 screen locker.
+* [screen brightness utility](../defaults/main/wm_components/multimedia.yml).
 * [feh](https://github.com/derf/feh), for displaying a background image.
 
 ## Quick Start
