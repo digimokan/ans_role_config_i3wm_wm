@@ -7,19 +7,12 @@ Install and configure the i3wm window manager.
 
 ## Table Of Contents
 
-* [Purpose](#purpose)
 * [Supported Operating Systems](#supported-operating-systems)
 * [Requirements](#requirements)
 * [Quick Start](#quick-start)
     * [Use From Playbook](#use-from-playbook)
 * [Role Options](#role-options)
 * [Contributing](#contributing)
-
-## Purpose
-
-* Install Xorg components and [i3wm](https://i3wm.org/).
-* Install various supporting desktop environment add-on utilities.
-* Configure i3wm and supporting utilities.
 
 ## Supported Operating Systems
 
@@ -29,19 +22,15 @@ Install and configure the i3wm window manager.
 
 ## Requirements
 
-### Must Be Installed And Configured
-
-* All core Xorg server components.
-* System and user `.Xresources`, `.Xmodmap`, `.xinitrc.d/` scripts, and
-  `.xprofile` are configured to be read on Xorg start.
+* [Xorg Server Components](https://www.x.org/wiki/).
+    * [digimokan/ans_role_config_xorg](https://github.com/digimokan/ans_role_config_xorg) may be used.
+* [Xorg User Scripts](https://venam.nixers.net/blog/unix/2020/01/27/xconfig.html).
+    * [digimokan/ans_role_config_xorg](https://github.com/digimokan/ans_role_config_xorg) may be used.
 * [fonts](../defaults/main/wm_components/fonts.yml).
-
-### Optional To Install And Configure
-
 * [compositor](../defaults/main/wm_components/compositor.yml).
 * [terminal emulator](../defaults/main/wm_components/terminal.yml).
 * [screen brightness utility](../defaults/main/wm_components/multimedia.yml).
-* [feh](https://github.com/derf/feh), for displaying a background image.
+* [background image display utility](../defaults/main/wm_components/bg_wallpaper.yml).
 
 ## Quick Start
 
