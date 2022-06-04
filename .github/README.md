@@ -27,10 +27,10 @@ Install and configure the i3wm window manager.
 * [Xorg User Scripts](https://venam.nixers.net/blog/unix/2020/01/27/xconfig.html).
     * [digimokan/ans_role_config_xorg](https://github.com/digimokan/ans_role_config_xorg) may be used.
 * [fonts](../defaults/main/wm_components/fonts.yml).
-* [compositor](../defaults/main/wm_components/compositor.yml).
 * [terminal emulator](../defaults/main/wm_components/terminal.yml).
-* [screen brightness utility](../defaults/main/wm_components/multimedia.yml).
-* [background image display utility](../defaults/main/wm_components/bg_wallpaper.yml).
+* [compositor](../defaults/main/wm_components/compositor.yml) (optional).
+* [background image display utility](../defaults/main/wm_components/bg_wallpaper.yml) (optional).
+* [screen brightness utility](../defaults/main/wm_components/multimedia.yml) (optional).
 
 ## Quick Start
 
