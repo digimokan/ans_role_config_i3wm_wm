@@ -8,7 +8,7 @@
   ansible.builtin.include_tasks: fonts.yml
 
 - name: "Set background (wallpaper) image"
-  ansible.builtin.include_tasks: background.yml
+  ansible.builtin.include_tasks: bg_wallpaper.yml
 
 - name: "Configure window colors and appearance"
   ansible.builtin.include_tasks: appearance.yml

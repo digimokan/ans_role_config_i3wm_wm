@@ -4,3 +4,6 @@ default_bg_wallpaper_path: "/home/{{ user_name }}/.config/i3/bg_wallpaper.jpg"
 # path to active background wallpaper
 active_bg_wallpaper_path: "{{ default_bg_wallpaper_path }}"
 
+# cmd to run to display wallpaper (NOTE: image filepath arg appended after cmd)
+display_bg_wallpaper_cmd: '/usr/bin/false'
+

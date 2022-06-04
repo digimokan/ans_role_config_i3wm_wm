@@ -1,3 +1,3 @@
-# cmd to run to start compositor ('picom', 'compton -f', or '' for no compositor)
-start_compositor_cmd: ''
+# cmd to run to start compositor ('picom', 'compton -f', etc)
+start_compositor_cmd: '/usr/bin/false'
 
