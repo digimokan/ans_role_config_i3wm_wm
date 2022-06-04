@@ -22,9 +22,7 @@ Install and configure the i3wm window manager.
 
 ## Requirements
 
-* [Xorg Server Components](https://www.x.org/wiki/).
-    * [digimokan/ans_role_config_xorg](https://github.com/digimokan/ans_role_config_xorg) may be used.
-* [Xorg User Scripts](https://venam.nixers.net/blog/unix/2020/01/27/xconfig.html).
+* [Xorg Server Components](https://www.x.org/wiki/) and [Xorg User Scripts](https://venam.nixers.net/blog/unix/2020/01/27/xconfig.html).
     * [digimokan/ans_role_config_xorg](https://github.com/digimokan/ans_role_config_xorg) may be used.
 * [fonts](../defaults/main/wm_components/fonts.yml).
 * [terminal emulator](../defaults/main/wm_components/terminal.yml).
