@@ -1,0 +1,3 @@
+# keymap to quit i3wm
+keymap_quit_i3wm: '$mod+Control+e'
+

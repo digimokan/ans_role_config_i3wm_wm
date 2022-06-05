@@ -5,10 +5,3 @@
     config_lines: |
       bindsym {{ keymap_launch_app_menu }} exec "{{ launch_app_menu_cmd }}"
 
-- name: "Set keymap for exit-i3wm to '{{ keymap_exit_i3wm }}'"
-  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
-  vars:
-    descrip: 'Keymap Exit i3wm'
-    config_lines: |
-      bindsym {{ keymap_exit_i3wm }} exit
-

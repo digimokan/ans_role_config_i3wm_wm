@@ -1,9 +1,6 @@
-# command to launch the screen-lock application
-lock_screen_cmd: 'i3lock'
+# command to launch the application-selection menu
+launch_app_menu_cmd: "{{ no_op_cmd }}"
 
-# keymap to launch the screen-lock application
-keymap_lock_screen: '$mod+Shift+l'
-
-# keymap to exit i3wm
-keymap_exit_i3wm: '$mod+Control+e'
+# keymap for launching application-selection menu
+keymap_launch_app_menu: '$mod+space'
 
