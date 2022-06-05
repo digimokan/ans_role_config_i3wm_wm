@@ -1,0 +1,7 @@
+- name: "Set keymap for screen-lock to '{{ screen_lock_cmd }}'"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Keymap Screen Lock'
+    config_lines: |
+      bindsym {{ keymap_screen_lock }} exec --no-startup-id "{{ screen_lock_cmd }}"
+

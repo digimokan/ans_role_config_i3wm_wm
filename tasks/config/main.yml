@@ -25,8 +25,11 @@
 - name: "Configure launching a terminal emulator"
   ansible.builtin.include_tasks: terminal.yml
 
-- name: "Configure launching app-menu, locking screen, and quitting i3wm"
-  ansible.builtin.include_tasks: menu.yml
+- name: "Configure launching app-menu and quitting i3wm"
+  ansible.builtin.include_tasks: app_menu.yml
+
+- name: "Configure screen locking"
+  ansible.builtin.include_tasks: screen_lock.yml
 
 - name: "Configure screen brightness, audio control/volume, etc"
   ansible.builtin.include_tasks: multimedia.yml
