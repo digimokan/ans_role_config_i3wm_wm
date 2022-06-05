@@ -34,6 +34,7 @@ Install and configure the i3wm window manager.
 * [screen locker](../defaults/main/wm_components/menu.yml) (optional)
 * [background image display utility](../defaults/main/wm_components/bg_wallpaper.yml) (optional)
 * [screen brightness utility](../defaults/main/wm_components/multimedia.yml) (optional)
+* [screenshot capture utility](../defaults/main/wm_components/multimedia.yml) (optional)
 
 ## Quick Start
 
@@ -65,7 +66,7 @@ Install and configure the i3wm window manager.
          ansible.builtin.include_role:
            name: ans_role_config_i3wm_wm
          vars:
-           user_name: "user2"
+           i3_user_name: "user2"
    ```
 
 ## Role Options
@@ -76,7 +77,7 @@ See the role `defaults` files for main role vars listings:
 
 Define these _required_ vars for the role:
 
-  * `user_name`: name of primary i3wm user to configure the desktop for
+  * `i3_user_name`: name of primary i3wm user to configure the desktop for
 
 ## Contributing
 

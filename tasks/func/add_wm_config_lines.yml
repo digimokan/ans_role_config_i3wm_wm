@@ -6,7 +6,7 @@
     marker: "# <<<<<<<<<< {mark} ANSIBLE BLOCK: {{ descrip }} >>>>>>>>>>"
     marker_begin: "LEAD"
     marker_end: "TERM"
-    owner: "{{ user_name }}"
+    owner: "{{ i3_user_name }}"
     mode: "{{ main_wm_config_permissions }}"
     create: yes
     state: "{{ block_state }}"

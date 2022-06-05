@@ -2,7 +2,7 @@
   ansible.builtin.copy:
     dest: "{{ default_bg_wallpaper_path }}"
     src: 'i3_bg_wallpaper.jpg'
-    owner: "{{ user_name }}"
+    owner: "{{ i3_user_name }}"
     mode: '666'
     force: yes
   become: true

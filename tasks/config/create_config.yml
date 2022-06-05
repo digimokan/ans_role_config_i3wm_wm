@@ -2,7 +2,7 @@
   ansible.builtin.file:
     path: "{{ config_dir }}"
     state: directory
-    owner: "{{ user_name }}"
+    owner: "{{ i3_user_name }}"
     mode: '755'
   vars:
     config_dir: "{{ main_wm_config_path | dirname }}"

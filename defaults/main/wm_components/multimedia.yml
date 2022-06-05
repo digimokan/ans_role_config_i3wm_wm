@@ -6,3 +6,15 @@ cmd_dec_screen_brightness: "{{ no_op_cmd }}"
 keymap_inc_screen_brightness: '$mod+Shift+k'
 keymap_dec_screen_brightness: '$mod+Shift+j'
 
+# command to run to capture png screenshot
+cmd_capture_png_screenshot: "{{ no_op_cmd }}"
+
+# directory to save captured png screenshots to (without trailing slash)
+screenshot_png_save_dir: "/home/{{ i3_user_name }}"
+
+# shell-expanded filename for the captured png screenshot file
+screenshot_png_file_name: '$(date +%F-%T).png'
+
+# keymap for capture-png-screenshot
+keymap_capture_png_screenshot: '$mod+p'
+

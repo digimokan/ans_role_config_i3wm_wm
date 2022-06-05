@@ -6,3 +6,11 @@
       bindsym {{ keymap_inc_screen_brightness }} exec --no-startup-id {{ cmd_inc_screen_brightness }}
       bindsym {{ keymap_dec_screen_brightness }} exec --no-startup-id {{ cmd_dec_screen_brightness }}
 
+- name: "Set keymap for capturing screenshot"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Keymap Capture Screenshot'
+    config_lines: >
+      bindsym {{ keymap_capture_png_screenshot }} exec --no-startup-id
+      "{{ cmd_capture_png_screenshot }} {{ screenshot_png_save_dir }}/{{ screenshot_png_file_name }}"
+

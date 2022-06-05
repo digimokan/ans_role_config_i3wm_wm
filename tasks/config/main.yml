@@ -34,7 +34,7 @@
 - name: "Configure quitting i3wm"
   ansible.builtin.include_tasks: quit_i3.yml
 
-- name: "Configure screen brightness, audio control/volume, etc"
+- name: "Configure screen brightness, audio control/volume, screenshot, etc"
   ansible.builtin.include_tasks: multimedia.yml
 
 - name: "Configure the top/bottom panel bar"
