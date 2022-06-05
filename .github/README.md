@@ -16,17 +16,22 @@ Install and configure the i3wm window manager.
 
 ## Supported Operating Systems
 
-* Ubuntu focal (20.04), hirsute (21.04), impish (21.10)
+* Ubuntu focal (20.04), impish (21.10), jammy (22.04)
 * Arch Linux.
 * FreeBSD.
 
 ## Requirements
 
+### User-Supplied Utilities
+
 * [Xorg Server Components](https://www.x.org/wiki/) and [Xorg User Scripts](https://venam.nixers.net/blog/unix/2020/01/27/xconfig.html)
     * [digimokan/ans_role_config_xorg](https://github.com/digimokan/ans_role_config_xorg) may be used
 * [fonts](../defaults/main/wm_components/fonts.yml)
 * [terminal emulator](../defaults/main/wm_components/terminal.yml)
+* [application menu](../defaults/main/wm_components/menu.yml)
+* [panel bar](../defaults/main/wm_components/panel_bar.yml) (i3bar used by default)
 * [compositor](../defaults/main/wm_components/compositor.yml) (optional)
+* [screen locker](../defaults/main/wm_components/menu.yml) (optional)
 * [background image display utility](../defaults/main/wm_components/bg_wallpaper.yml) (optional)
 * [screen brightness utility](../defaults/main/wm_components/multimedia.yml) (optional)
 

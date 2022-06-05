@@ -7,8 +7,8 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - focal
-        - hirsute
         - impish
+        - jammy
     - name: Archlinux
       versions:
         - all
