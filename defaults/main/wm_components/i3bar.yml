@@ -18,7 +18,7 @@ i3bar_workspace_colors:
   item_borders: '#005E68'
 
 # right-side status area cmd: shows time/date, volume, net-status, etc.
-i3bar_status_area_cmd: "/usr/bin/false"
+i3bar_status_area_cmd: "{{ no_op_cmd }}"
 
 # separator symbol between items in the right-side panel bar status area
 i3bar_status_item_separator: '│'

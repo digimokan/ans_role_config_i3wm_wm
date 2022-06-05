@@ -1,11 +1,11 @@
 # command to run to start an enhanced terminal emulator window (statusbar, etc)
-start_enhanced_term_emulator_cmd: '/usr/bin/false'
+start_enhanced_term_emulator_cmd: "{{ no_op_cmd }}"
 
 # keymap for launching an enhanced terminal emulator (statusbar, etc)
 keymap_launch_enhanced_term_emulator: '$mod+Delete'
 
 # command to run to start a plain terminal emulator window
-start_term_emulator_cmd: '/usr/bin/false'
+start_term_emulator_cmd: "{{ no_op_cmd }}"
 
 # keymap for launching a plain terminal emulator
 keymap_launch_term_emulator: '$mod+Shift+Delete'

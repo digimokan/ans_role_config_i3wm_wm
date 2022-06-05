@@ -1,6 +1,6 @@
 # commands for adjusting screen brightness
-cmd_inc_screen_brightness: '/usr/bin/false'
-cmd_dec_screen_brightness: '/usr/bin/false'
+cmd_inc_screen_brightness: "{{ no_op_cmd }}"
+cmd_dec_screen_brightness: "{{ no_op_cmd }}"
 
 # keymaps for adjusting screen brightness
 keymap_inc_screen_brightness: '$mod+Shift+k'
