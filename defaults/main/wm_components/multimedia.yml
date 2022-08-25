@@ -6,6 +6,12 @@ cmd_dec_screen_brightness: "{{ no_op_cmd }}"
 keymap_inc_screen_brightness: '$mod+Shift+k'
 keymap_dec_screen_brightness: '$mod+Shift+j'
 
+# command to run to play/pause audio media
+cmd_play_pause_audio_media: "{{ no_op_cmd }}"
+
+# keymap for play/pause audio media
+keymap_play_pause_audio_media: 'Print'
+
 # commands for adjusting sound volume
 cmd_inc_volume: "{{ no_op_cmd }}"
 cmd_dec_volume: "{{ no_op_cmd }}"

@@ -6,6 +6,13 @@
       bindsym {{ keymap_inc_screen_brightness }} exec --no-startup-id {{ cmd_inc_screen_brightness }}
       bindsym {{ keymap_dec_screen_brightness }} exec --no-startup-id {{ cmd_dec_screen_brightness }}
 
+- name: "Set keymap for play/pause of audio media"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Keymap Play/Pause Audio Media'
+    config_lines: |
+      bindsym {{ keymap_play_pause_audio_media }} exec --no-startup-id {{ cmd_play_pause_audio_media }}
+
 - name: "Set keymaps for adjusting sound volume"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
