@@ -6,6 +6,14 @@ cmd_dec_screen_brightness: "{{ no_op_cmd }}"
 keymap_inc_screen_brightness: '$mod+Shift+k'
 keymap_dec_screen_brightness: '$mod+Shift+j'
 
+# commands for adjusting sound volume
+cmd_inc_volume: "{{ no_op_cmd }}"
+cmd_dec_volume: "{{ no_op_cmd }}"
+
+# keymaps for adjusting sound volume
+keymap_inc_volume: 'Pause'
+keymap_dec_volume: 'Scroll_Lock'
+
 # command to run to capture png screenshot
 cmd_capture_png_screenshot: "{{ no_op_cmd }}"
 

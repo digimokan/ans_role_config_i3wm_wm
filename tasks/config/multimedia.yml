@@ -6,6 +6,14 @@
       bindsym {{ keymap_inc_screen_brightness }} exec --no-startup-id {{ cmd_inc_screen_brightness }}
       bindsym {{ keymap_dec_screen_brightness }} exec --no-startup-id {{ cmd_dec_screen_brightness }}
 
+- name: "Set keymaps for adjusting sound volume"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Keymaps Adjust Sound Volume'
+    config_lines: |
+      bindsym {{ keymap_inc_volume }} exec --no-startup-id {{ cmd_inc_volume }}
+      bindsym {{ keymap_dec_volume }} exec --no-startup-id {{ cmd_dec_volume }}
+
 - name: "Set keymap for capturing screenshot"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
