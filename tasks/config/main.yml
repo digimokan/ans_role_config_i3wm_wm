@@ -28,7 +28,7 @@
 - name: "Configure launching application-menu"
   ansible.builtin.include_tasks: app_menu.yml
 
-- name: "Configure screen locking"
+- name: "Configure screensaver and screen-locking"
   ansible.builtin.include_tasks: screen_pwr.yml
 
 - name: "Configure quitting i3wm"
