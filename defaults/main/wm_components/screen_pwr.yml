@@ -1,0 +1,9 @@
+# command to run to start the screensaver utility in the background
+cmd_start_screensaver_utility: "{{ no_op_cmd }}"
+
+# command to launch the screen-lock application
+cmd_screen_lock: "{{ no_op_cmd }}"
+
+# keymap to launch the screen-lock application
+keymap_screen_lock: '$mod+Shift+l'
+

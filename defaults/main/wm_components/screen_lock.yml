@@ -1,6 +1,0 @@
-# command to launch the screen-lock application
-screen_lock_cmd: "{{ no_op_cmd }}"
-
-# keymap to launch the screen-lock application
-keymap_screen_lock: '$mod+Shift+l'
-

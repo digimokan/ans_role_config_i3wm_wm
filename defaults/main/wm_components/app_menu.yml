@@ -1,5 +1,5 @@
 # command to launch the application-selection menu
-launch_app_menu_cmd: "{{ no_op_cmd }}"
+cmd_launch_app_menu: "{{ no_op_cmd }}"
 
 # keymap for launching application-selection menu
 keymap_launch_app_menu: '$mod+space'

@@ -29,7 +29,7 @@
   ansible.builtin.include_tasks: app_menu.yml
 
 - name: "Configure screen locking"
-  ansible.builtin.include_tasks: screen_lock.yml
+  ansible.builtin.include_tasks: screen_pwr.yml
 
 - name: "Configure quitting i3wm"
   ansible.builtin.include_tasks: quit_i3.yml

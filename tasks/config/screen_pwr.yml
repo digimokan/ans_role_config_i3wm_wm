@@ -1,0 +1,13 @@
+- name: "Set screensaver utility command to '{{ cmd_start_screensaver_utility }}'"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Start-Screensaver-Utility Command'
+    config_lines: "exec_always --no-startup-id \"{{ cmd_start_screensaver_utility }}\""
+
+- name: "Set keymap for screen-lock to '{{ screen_lock_cmd }}'"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Keymap Screen Lock'
+    config_lines: |
+      bindsym {{ keymap_screen_lock }} exec --no-startup-id "{{ screen_lock_cmd }}"
+

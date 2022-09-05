@@ -1,3 +1,3 @@
 # cmd to run to start compositor ('picom', 'compton -f', etc)
-start_compositor_cmd: '/usr/bin/false'
+cmd_start_compositor: "{{ no_op_cmd }}"
 

@@ -5,5 +5,5 @@ default_bg_wallpaper_path: "/home/{{ i3_user_name }}/.config/i3/bg_wallpaper.jpg
 active_bg_wallpaper_path: "{{ default_bg_wallpaper_path }}"
 
 # cmd to run to display wallpaper (NOTE: image filepath arg appended after cmd)
-display_bg_wallpaper_cmd: "{{ no_op_cmd }}"
+cmd_display_bg_wallpaper: "{{ no_op_cmd }}"
 
