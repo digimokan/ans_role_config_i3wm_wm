@@ -14,5 +14,5 @@
     descrip: 'Display Background Wallpaper'
     config_lines: |
       exec_always --no-startup-id {{ display_cmd_and_arg }}
-    display_cmd_and_arg: "{{ display_bg_wallpaper_cmd }} '{{ active_bg_wallpaper_path }}'"
+    display_cmd_and_arg: "{{ cmd_display_bg_wallpaper }} '{{ active_bg_wallpaper_path }}'"
 

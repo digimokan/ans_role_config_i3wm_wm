@@ -1,6 +1,6 @@
-- name: "Set compositor command to '{{ start_compositor_cmd }}'"
+- name: "Set compositor command to '{{ cmd_start_compositor }}'"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
     descrip: 'Start-Compositor Command'
-    config_lines: "exec_always --no-startup-id \"{{ start_compositor_cmd }}\""
+    config_lines: "exec_always --no-startup-id \"{{ cmd_start_compositor }}\""
 

@@ -3,9 +3,9 @@
 
 - name: "Use {{ config_selection }} for panel bar config in i3"
   ansible.builtin.set_fact:
-    bar_config: "{{ i3bar_config_lines if (start_panel_bar_cmd == 'i3bar') else '# See external panel bar config....'}}"
+    bar_config: "{{ i3bar_config_lines if (cmd_start_panel_bar == 'i3bar') else '# See external panel bar config....'}}"
   vars:
-    config_selection: "{{ 'i3bar' if (start_panel_bar_cmd == 'i3bar') else 'start_panel_bar_cmd' }}"
+    config_selection: "{{ 'i3bar' if (cmd_start_panel_bar == 'i3bar') else 'cmd_start_panel_bar' }}"
 
 - name: "Configure all panel bar (aka 'tray') settings"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
@@ -13,7 +13,7 @@
     descrip: 'Panel Bar'
     config_lines: |
       bar {
-        i3bar_command {{ start_panel_bar_cmd }}
+        i3bar_command {{ cmd_start_panel_bar }}
         {{ bar_config | indent(width=2, first=False) }}
       }
 

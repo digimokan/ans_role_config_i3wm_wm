@@ -3,5 +3,5 @@
   vars:
     descrip: 'Keymap Launch Application Selection Menu'
     config_lines: |
-      bindsym {{ keymap_launch_app_menu }} exec "{{ launch_app_menu_cmd }}"
+      bindsym {{ keymap_launch_app_menu }} exec "{{ cmd_launch_app_menu }}"
 
