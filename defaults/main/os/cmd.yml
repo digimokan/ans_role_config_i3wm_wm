@@ -1,3 +1,4 @@
-# command to start i3wm
+# command to start i3wm, and descriptive WM name
+# NOTE: this var is exported by the role, for use with display managers
 i3wm_session: { cmd: 'i3', name: 'i3wm' }
 
