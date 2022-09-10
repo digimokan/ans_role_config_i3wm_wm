@@ -65,6 +65,7 @@ Install and configure the i3wm window manager.
        - name: "Configure the i3wm window manager"
          ansible.builtin.include_role:
            name: ans_role_config_i3wm_wm
+           public: yes
          vars:
            i3_user_name: "user2"
    ```
