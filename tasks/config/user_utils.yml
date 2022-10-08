@@ -2,9 +2,9 @@
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
     descrip: 'Run Optional User-Defined Utilities'
-    config_lines: "{{ util_cmds if (user_utilities|length > 0) else '# (no utils specified)' }}"
+    config_lines: "{{ util_cmds if (cmds_user_utilities|length > 0) else '# (no utils specified)' }}"
     util_cmds: |
-      {% for item in user_utilities %}
+      {% for item in cmds_user_utilities %}
       {{ '# '  }}{{ item.descrip }}
       {{ 'exec --no-startup-id "' }}{{ item.cmd_start }}{{ '"' }}
       {% endfor %}
