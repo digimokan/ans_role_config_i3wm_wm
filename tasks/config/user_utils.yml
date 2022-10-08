@@ -1,0 +1,10 @@
+- name: "Run an optional set of user-defined commands/services"
+  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
+  vars:
+    descrip: 'Run Optional User-Defined Utilities'
+    config_lines: |
+      {% for item in user_utilities %}
+      {{ '# '  }}{{ item.descrip }}
+      {{ 'exec --no-startup-id "' }}{{ item.cmd_start }}{{ '"' }}
+      {% endfor %}
+
