@@ -1,5 +1,5 @@
 # optional user commands/services to run on i3wm-start
-# user_utilities:
+# cmds_user_utilities:
 #   - { cmd_start: "{{ xcape_start_cmd }}", descrip: 'run xcape keymod utility in the background' }
 cmds_user_utilities: []
 
