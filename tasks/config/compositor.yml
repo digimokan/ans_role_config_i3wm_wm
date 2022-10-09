@@ -2,5 +2,5 @@
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
     descrip: 'Start-Compositor Command'
-    config_lines: "exec_always --no-startup-id \"{{ cmd_start_compositor }}\""
+    config_lines: "exec --no-startup-id \"{{ cmd_start_compositor }}\""
 
