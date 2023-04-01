@@ -1,7 +1,0 @@
-- name: "Set main keymap mod key to {{ main_keymap_mod_key }}"
-  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
-  vars:
-    descrip: 'Main Keymap Mod Key'
-    config_lines: |
-      set $mod {{ 'Mod4' if (main_keymap_mod_key == 'Super') else 'Mod1' }}
-

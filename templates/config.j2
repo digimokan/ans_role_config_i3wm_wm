@@ -1,0 +1,182 @@
+# vim: set filetype=conf:
+# System default config (not used; overriden by this config file):
+#   {{ system_default_config_path }}
+# Upstream config source:
+#   https://github.com/i3/i3/blob/next/etc/config
+# Exact version line required for newer i3 versions to start properly:
+# i3 config file (v4)
+
+# run an optional cmd to start a compositor
+exec --no-startup-id "{{ cmd_start_compositor }}"
+
+# set the window-title-font
+font pango: {{ window_titles_font }}
+
+# run a cmd to display wallpaper in the background
+exec --no-startup-id {{ cmd_display_bg_wallpaper }} '{{ active_bg_wallpaper_path }}'
+
+# Set Some Reusable Color Vars
+set $bg-color             {{ i3wm_window_colors.bg_active }}
+set $inactive-bg-color    {{ i3wm_window_colors.bg_inactive }}
+set $text-color           {{ i3wm_window_colors.text_active }}
+set $inactive-text-color  {{ i3wm_window_colors.text_inactive }}
+set $urgent-bg-color      {{ i3wm_window_colors.urgent_bg }}
+set $indicator-color      {{ i3wm_window_colors.indicator }}
+# Window-Type           Border              Background         Text                 Indicator
+#############           ######              ##########         ####                 #########
+client.focused          $bg-color           $bg-color          $text-color          $indicator-color
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $indicator-color
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $indicator-color
+client.background       $bg-color           $bg-color          $bg-color            $bg-color
+
+# configure hiding of window screen edge borders
+hide_edge_borders {{ 'both' if hide_window_outer_borders else 'smart' }}
+
+# set the main keymap 'Mod' key
+set $mod {{ 'Mod4' if (main_keymap_mod_key == 'Super') else 'Mod1' }}
+
+# set workspace labels
+set $workspace1 "{{ workspace_labels.workspace_1 }}"
+set $workspace2 "{{ workspace_labels.workspace_2 }}"
+set $workspace3 "{{ workspace_labels.workspace_3 }}"
+set $workspace4 "{{ workspace_labels.workspace_4 }}"
+set $workspace5 "{{ workspace_labels.workspace_5 }}"
+set $workspace6 "{{ workspace_labels.workspace_6 }}"
+set $workspace7 "{{ workspace_labels.workspace_7 }}"
+set $workspace8 "{{ workspace_labels.workspace_8 }}"
+set $workspace9 "{{ workspace_labels.workspace_9 }}"
+set $workspace10 "{{ workspace_labels.workspace_10 }}"
+set $workspace11 "{{ workspace_labels.workspace_11 }}"
+set $workspace12 "{{ workspace_labels.workspace_12 }}"
+set $workspace13 "{{ workspace_labels.workspace_13 }}"
+set $workspace14 "{{ workspace_labels.workspace_14 }}"
+set $workspace15 "{{ workspace_labels.workspace_15 }}"
+
+# configure auto-previous-workspace switching
+workspace_auto_back_and_forth {{ 'yes' if auto_prev_workspace_switch else 'no' }}
+
+# set keymap for switch-to-previous-workspace
+bindsym {{ keymap_switch_to_prev_workspace }} workspace back_and_forth
+
+# set keymaps for switch-to-workspace-x
+bindsym {{ keymap_switch_to_workspace_1 }} workspace $workspace1
+bindsym {{ keymap_switch_to_workspace_2 }} workspace $workspace2
+bindsym {{ keymap_switch_to_workspace_3 }} workspace $workspace3
+bindsym {{ keymap_switch_to_workspace_4 }} workspace $workspace4
+bindsym {{ keymap_switch_to_workspace_5 }} workspace $workspace5
+bindsym {{ keymap_switch_to_workspace_6 }} workspace $workspace6
+bindsym {{ keymap_switch_to_workspace_7 }} workspace $workspace7
+bindsym {{ keymap_switch_to_workspace_8 }} workspace $workspace8
+bindsym {{ keymap_switch_to_workspace_9 }} workspace $workspace9
+bindsym {{ keymap_switch_to_workspace_10 }} workspace $workspace10
+bindsym {{ keymap_switch_to_workspace_11 }} workspace $workspace11
+bindsym {{ keymap_switch_to_workspace_12 }} workspace $workspace12
+bindsym {{ keymap_switch_to_workspace_13 }} workspace $workspace13
+bindsym {{ keymap_switch_to_workspace_14 }} workspace $workspace14
+bindsym {{ keymap_switch_to_workspace_15 }} workspace $workspace15
+
+# set keyamps for move-current-container-to-workspace-x
+bindsym {{ keymap_move_to_workspace_1 }} move container to workspace $workspace1
+bindsym {{ keymap_move_to_workspace_2 }} move container to workspace $workspace2
+bindsym {{ keymap_move_to_workspace_3 }} move container to workspace $workspace3
+bindsym {{ keymap_move_to_workspace_4 }} move container to workspace $workspace4
+bindsym {{ keymap_move_to_workspace_5 }} move container to workspace $workspace5
+bindsym {{ keymap_move_to_workspace_6 }} move container to workspace $workspace6
+bindsym {{ keymap_move_to_workspace_7 }} move container to workspace $workspace7
+bindsym {{ keymap_move_to_workspace_8 }} move container to workspace $workspace8
+bindsym {{ keymap_move_to_workspace_9 }} move container to workspace $workspace9
+bindsym {{ keymap_move_to_workspace_10 }} move container to workspace $workspace10
+bindsym {{ keymap_move_to_workspace_11 }} move container to workspace $workspace11
+bindsym {{ keymap_move_to_workspace_12 }} move container to workspace $workspace12
+bindsym {{ keymap_move_to_workspace_13 }} move container to workspace $workspace13
+bindsym {{ keymap_move_to_workspace_14 }} move container to workspace $workspace14
+bindsym {{ keymap_move_to_workspace_15 }} move container to workspace $workspace15
+
+# set keymaps for stacked, tabbed, tiling, and fullscreen windows
+bindsym {{ keymap_container_stacked }} layout stacking
+bindsym {{ keymap_container_tabbed }} layout tabbed
+bindsym {{ keymap_container_tile }} layout toggle split
+bindsym {{ keymap_toggle_fullscreen }} fullscreen toggle
+
+# set keymaps for containerize window to vertical, horizontal, or h/v toggle
+bindsym {{ keymap_set_tiling_vertical }} split v
+bindsym {{ keymap_set_tiling_horizontal }} split h
+bindsym {{ keymap_set_tiling_toggle }} split t
+
+# set keymaps for focus on parent or child container
+bindsym {{ keymap_focus_parent_container }} focus parent
+bindsym {{ keymap_focus_child_container }} focus child
+
+# set keymap for kill currently-focused window
+bindsym {{ keymap_kill_focused_window }} kill
+
+# set keymaps for focus on left/right/up/down window in current workspace
+bindsym {{ keymap_focus_up }} focus up
+bindsym {{ keymap_focus_down }} focus down
+bindsym {{ keymap_focus_left }} focus left
+bindsym {{ keymap_focus_right }} focus right
+
+# set keymaps for move-window left/right/up/down in current container
+bindsym {{ keymap_move_window_up }} move up
+bindsym {{ keymap_move_window_down }} move down
+bindsym {{ keymap_move_window_left }} move left
+bindsym {{ keymap_move_window_right }} move right
+
+# set keymap for toggle floating/tiling mode of  currently-focused window
+bindsym {{ keymap_toggle_window_floating }} floating toggle
+
+# set keymap for toggle focus between floating/tiling windows
+bindsym {{ keymap_toggle_focus_floating }} focus mode_toggle
+
+# set keymap for resize currently-focused window
+mode "resize" {
+  # These bindings trigger as soon as you enter the resize mode
+  bindsym Left resize shrink width 5 px or 5 ppt
+  bindsym Up resize grow height 5 px or 5 ppt
+  bindsym Down resize shrink height 5 px or 5 ppt
+  bindsym Right resize grow width 5 px or 5 ppt
+  # back to normal: Enter or Escape
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+bindsym {{ keymap_resize_window }} mode "resize"
+
+# set keymap for launch-terminal-emulator
+bindsym {{ keymap_launch_term_emulator }} exec --no-startup-id "{{ cmd_start_term_emulator }}"
+
+# set keymap for launch-application-selection-menu
+bindsym {{ keymap_launch_app_menu }} exec "{{ cmd_launch_app_menu }}"
+
+# start the screensaver utility
+exec --no-startup-id "{{ cmd_start_screensaver_utility }}"
+
+# set keymap for screen-lock
+bindsym {{ keymap_screen_lock }} exec --no-startup-id "{{ cmd_screen_lock }}"
+
+# set keymap for quit-i3wm
+bindsym {{ keymap_quit_i3wm }} exit
+
+# set keymaps for adjusting screen brightness
+bindsym {{ keymap_inc_screen_brightness }} exec --no-startup-id "{{ cmd_inc_screen_brightness }}"
+bindsym {{ keymap_dec_screen_brightness }} exec --no-startup-id "{{ cmd_dec_screen_brightness }}"
+
+# set keymap for play/pause of audio media
+bindsym {{ keymap_play_pause_audio_media }} exec --no-startup-id "{{ cmd_play_pause_audio_media }}"
+
+# set keymaps for adjusting sound volume
+bindsym {{ keymap_inc_volume }} exec --no-startup-id "{{ cmd_inc_volume }}"
+bindsym {{ keymap_dec_volume }} exec --no-startup-id "{{ cmd_dec_volume }}"
+
+# set keymap for capturing screenshot
+bindsym {{ keymap_capture_png_screenshot }} exec --no-startup-id "{{ cmd_capture_png_screenshot }} '{{ screenshot_png_save_dir }}/{{ screenshot_png_file_name }}'"
+
+# configure all panel bar (aka 'tray') settings
+bar {
+  i3bar_command {{ cmd_start_panel_bar }}
+  {{ bar_config | indent(width=2, first=False) }}
+}
+
+# start all optional user-defined commands
+{{ user_defined_cmds }}
+

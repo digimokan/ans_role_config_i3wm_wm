@@ -1,0 +1,10 @@
+- name: "Configure all i3wm settings for user '{{ i3_user_name }}' in '{{ main_wm_config_path }}'"
+  ansible.builtin.template:
+    dest: "{{ main_wm_config_path }}"
+    src: "config.j2"
+    owner: "{{ i3_user_name }}"
+    mode: "{{ main_wm_config_permissions }}"
+    force: yes
+  become: true
+  become_user: root
+

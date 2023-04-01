@@ -1,0 +1,30 @@
+- name: "Store default background image at '{{ default_bg_wallpaper_path }}'"
+  ansible.builtin.copy:
+    dest: "{{ default_bg_wallpaper_path }}"
+    src: 'i3_bg_wallpaper.jpg'
+    owner: "{{ i3_user_name }}"
+    mode: '666'
+    force: yes
+  become: true
+  become_user: root
+
+- name: "Define i3bar config, which will be used if i3bar selected as panel bar"
+  ansible.builtin.include_tasks: i3bar.yml
+  when: (cmd_start_panel_bar == 'i3bar')
+
+- name: "Define {{ config_selection }} for panel bar config in i3"
+  ansible.builtin.set_fact:
+    bar_config: "{{ i3bar_config_lines if (cmd_start_panel_bar == 'i3bar') else '# See external panel bar config....'}}"
+  vars:
+    config_selection: "{{ 'i3bar' if (cmd_start_panel_bar == 'i3bar') else 'cmd_start_panel_bar' }}"
+
+- name: "Define the optional set of user-defined commands/services to start"
+  ansible.builtin.set_fact:
+    user_defined_cmds: "{{ util_cmds if (cmds_user_utilities|length > 0) else '# (no utils specified)' }}"
+  vars:
+    util_cmds: |
+      {% for item in cmds_user_utilities %}
+      {{ '# '  }}{{ item.descrip }}
+      {{ 'exec --no-startup-id "' }}{{ item.cmd_start }}{{ '"' }}
+      {% endfor %}
+

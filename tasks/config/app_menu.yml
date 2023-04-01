@@ -1,7 +1,0 @@
-- name: "Set keymap for launch-application-selection-menu to '{{ keymap_launch_app_menu }}'"
-  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
-  vars:
-    descrip: 'Keymap Launch Application Selection Menu'
-    config_lines: |
-      bindsym {{ keymap_launch_app_menu }} exec "{{ cmd_launch_app_menu }}"
-

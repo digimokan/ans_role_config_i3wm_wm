@@ -1,31 +1,9 @@
-- name: "Create the i3 WM user-specific config file, and add leading comment"
-  ansible.builtin.include_tasks: create_config.yml
-- name: "Configure WM compositor"
-  ansible.builtin.include_tasks: compositor.yml
-- name: "Set main WM fonts"
-  ansible.builtin.include_tasks: fonts.yml
-- name: "Set background (wallpaper) image"
-  ansible.builtin.include_tasks: bg_wallpaper.yml
-- name: "Configure window colors and appearance"
-  ansible.builtin.include_tasks: appearance.yml
-- name: "Configure the main keymap 'Mod' key"
-  ansible.builtin.include_tasks: keymap_mod.yml
-- name: "Configure workspaces"
-  ansible.builtin.include_tasks: workspaces.yml
-- name: "Configure tiling keymaps"
-  ansible.builtin.include_tasks: tiling.yml
-- name: "Configure launching a terminal emulator"
-  ansible.builtin.include_tasks: terminal.yml
-- name: "Configure launching application-menu"
-  ansible.builtin.include_tasks: app_menu.yml
-- name: "Configure screensaver and screen-locking"
-  ansible.builtin.include_tasks: screen_pwr.yml
-- name: "Configure quitting i3wm"
-  ansible.builtin.include_tasks: quit_i3.yml
-- name: "Configure screen brightness, audio control/volume, screenshot, etc"
-  ansible.builtin.include_tasks: multimedia.yml
-- name: "Configure the top/bottom panel bar"
-  ansible.builtin.include_tasks: panel_bar.yml
-- name: "Configure user-defined utilities"
-  ansible.builtin.include_tasks: user_utils.yml
+- name: "Create the i3 WM user-specific config dir"
+  ansible.builtin.include_tasks: create_config_dir.yml
+
+- name: "Construct all vars for use in '{{ main_wm_config_path }}'"
+  ansible.builtin.include_tasks: construct_vars.yml
+
+- name: "Configure all i3wm settings in the main config file"
+  ansible.builtin.include_tasks: create_config_file.yml
 

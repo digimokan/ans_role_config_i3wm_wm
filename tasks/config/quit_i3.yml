@@ -1,7 +1,0 @@
-- name: "Set keymap for quit-i3wm to '{{ keymap_quit_i3wm }}'"
-  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
-  vars:
-    descrip: 'Keymap Quit i3wm'
-    config_lines: |
-      bindsym {{ keymap_quit_i3wm }} exit
-

@@ -1,0 +1,11 @@
+- name: "Create dir '{{ config_dir }}', if not exist"
+  ansible.builtin.file:
+    path: "{{ config_dir }}"
+    state: directory
+    owner: "{{ i3_user_name }}"
+    mode: '755'
+  vars:
+    config_dir: "{{ main_wm_config_path | dirname }}"
+  become: true
+  become_user: root
+

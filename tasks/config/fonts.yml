@@ -1,7 +1,0 @@
-- name: "Set window title font to {{ window_titles_font }}"
-  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
-  vars:
-    descrip: 'Window Title Font'
-    config_lines: |
-      font pango: {{ window_titles_font }}
-
