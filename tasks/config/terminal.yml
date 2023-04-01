@@ -1,14 +1,7 @@
-- name: "Set keymap for launch-basic-terminal-emulator to '{{ cmd_start_basic_term_emulator }}'"
+- name: "Set keymap for launch-terminal-emulator to '{{ cmd_start_term_emulator }}'"
   ansible.builtin.include_tasks: func/add_wm_config_lines.yml
   vars:
-    descrip: 'Keymap Launch Basic Terminal Emulator'
+    descrip: 'Keymap Launch Terminal Emulator'
     config_lines: |
-      bindsym {{ keymap_launch_basic_term_emulator }} exec --no-startup-id "{{ cmd_start_basic_term_emulator }}"
-
-- name: "Set keymap for launch-enhanced-terminal-emulator to '{{ cmd_start_enhanced_term_emulator }}'"
-  ansible.builtin.include_tasks: func/add_wm_config_lines.yml
-  vars:
-    descrip: 'Keymap Launch Enhanced Terminal Emulator'
-    config_lines: |
-      bindsym {{ keymap_launch_enhanced_term_emulator }} exec --no-startup-id "{{ cmd_start_enhanced_term_emulator }}"
+      bindsym {{ keymap_launch_term_emulator }} exec --no-startup-id "{{ cmd_start_term_emulator }}"
 

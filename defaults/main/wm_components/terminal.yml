@@ -1,12 +1,6 @@
-# command to run to start a basic terminal emulator window
-cmd_start_basic_term_emulator: "{{ no_op_cmd }}"
+# command to run to start a terminal emulator window
+cmd_start_term_emulator: "{{ no_op_cmd }}"
 
-# keymap for launching a basic terminal emulator
-keymap_launch_basic_term_emulator: '$mod+Shift+Delete'
-
-# command to run to start an enhanced terminal emulator window (statusbar, etc)
-cmd_start_enhanced_term_emulator: "{{ no_op_cmd }}"
-
-# keymap for launching an enhanced terminal emulator (statusbar, etc)
-keymap_launch_enhanced_term_emulator: '$mod+Delete'
+# keymap for launching a terminal emulator
+keymap_launch_term_emulator: '$mod+Shift+Delete'
 
