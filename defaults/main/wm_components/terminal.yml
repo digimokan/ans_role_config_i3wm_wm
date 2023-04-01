@@ -2,5 +2,5 @@
 cmd_start_term_emulator: "{{ no_op_cmd }}"
 
 # keymap for launching a terminal emulator
-keymap_launch_term_emulator: '$mod+Shift+Delete'
+keymap_launch_term_emulator: '$mod+Delete'
 
