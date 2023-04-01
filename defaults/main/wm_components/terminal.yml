@@ -1,6 +1,9 @@
 # command to run to start a terminal emulator window
 cmd_start_term_emulator: "{{ no_op_cmd }}"
 
+# arg to cmd_start_term_emulator that sets the x11 WM class of the term instance
+cmd_arg_term_emulator_class: "--class "
+
 # keymap for launching a terminal emulator
 keymap_launch_term_emulator: '$mod+Delete'
 
