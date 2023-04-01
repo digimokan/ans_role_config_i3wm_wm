@@ -145,6 +145,17 @@ bindsym {{ keymap_resize_window }} mode "resize"
 # set keymap for launch-terminal-emulator
 bindsym {{ keymap_launch_term_emulator }} exec --no-startup-id "{{ cmd_start_term_emulator }}"
 
+# set keymap for starting the terminal emulator in a special dropdown instance
+bindsym {{ keymap_toggle_dropdown_term }} exec --no-startup-id "{{ cmd_start_term_emulator }} {{ cmd_arg_term_emulator_class }}wm_dropdown_term"
+for_window [class="dropdown_term"] floating enable
+for_window [class="dropdown_term"] move scratchpad
+for_window [class="dropdown_term"] scratchpad show
+for_window [class="dropdown_term"] move position 0 px 5 px
+for_window [class="dropdown_term"] resize set 100 ppt 80 ppt
+for_window [class="dropdown_term"] move scratchpad
+for_window [class="dropdown_term"] border none
+bindsym $mod+Next [class="wm_dropdown_term"] scratchpad show
+
 # set keymap for launch-application-selection-menu
 bindsym {{ keymap_launch_app_menu }} exec "{{ cmd_launch_app_menu }}"
 
