@@ -169,7 +169,7 @@ bindsym {{ keymap_inc_volume }} exec --no-startup-id "{{ cmd_inc_volume }}"
 bindsym {{ keymap_dec_volume }} exec --no-startup-id "{{ cmd_dec_volume }}"
 
 # set keymap for capturing screenshot
-bindsym {{ keymap_capture_png_screenshot }} exec --no-startup-id "{{ cmd_capture_png_screenshot }} '{{ screenshot_png_save_dir }}/{{ screenshot_png_file_name }}'"
+bindsym {{ keymap_capture_png_screenshot }} exec --no-startup-id {{ cmd_capture_png_screenshot }} "{{ screenshot_png_save_dir }}/{{ screenshot_png_file_name }}"
 
 # configure all panel bar (aka 'tray') settings
 bar {
