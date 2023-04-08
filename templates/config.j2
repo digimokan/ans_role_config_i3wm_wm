@@ -189,5 +189,8 @@ bar {
 }
 
 # start all optional user-defined commands
-{{ user_defined_cmds }}
+{% for cmd in cmds_user_utilities %}
+{{ '# '  }}{{ cmd.descrip }}
+{{ 'exec --no-startup-id "' }}{{ cmd.cmd_start }}{{ '"' }}
+{% endfor %}
 
