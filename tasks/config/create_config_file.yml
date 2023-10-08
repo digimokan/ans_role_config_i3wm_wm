@@ -4,7 +4,7 @@
     src: "config.j2"
     owner: "{{ i3_user_name }}"
     mode: "{{ main_wm_config_permissions }}"
-    force: yes
+    force: true
   become: true
   become_user: root
 
