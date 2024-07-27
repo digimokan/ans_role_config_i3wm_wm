@@ -93,6 +93,9 @@ bindsym {{ keymap_move_to_workspace_13 }} move container to workspace $workspace
 bindsym {{ keymap_move_to_workspace_14 }} move container to workspace $workspace14
 bindsym {{ keymap_move_to_workspace_15 }} move container to workspace $workspace15
 
+# set the layout that all workspace parent containers will have on i3wm start
+workspace_layout {{ default_workspace_container_layout }}
+
 # set keymaps for stacked, tabbed, tiling, and fullscreen windows
 bindsym {{ keymap_container_stacked }} layout stacking
 bindsym {{ keymap_container_tabbed }} layout tabbed
@@ -143,7 +146,7 @@ mode "resize" {
 bindsym {{ keymap_resize_window }} mode "resize"
 
 # set keymap for launch-terminal-emulator in tabbed-mode, as container sibling
-bindsym {{ keymap_launch_term_emulator }} layout tabbed; exec --no-startup-id "{{ cmd_start_term_emulator }}"
+bindsym {{ keymap_launch_term_emulator }} exec --no-startup-id "{{ cmd_start_term_emulator }}"
 
 # set keymap for starting the terminal emulator in a special dropdown instance
 exec --no-startup-id "{{ cmd_start_term_emulator }} {{ cmd_arg_term_emulator_class }}wm_dropdown_term"

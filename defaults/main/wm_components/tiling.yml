@@ -1,3 +1,7 @@
+# the layout that all workspace parent containers will have on i3wm start
+# one of 'default', 'stacking', or 'tabbed'
+default_workspace_container_layout: 'tabbed'
+
 # change container layout to stacked, tabbed, toggle-v/h-tile, or fullscreen
 keymap_container_stacked: '$mod+o'
 keymap_container_tabbed: '$mod+u'
