@@ -123,7 +123,7 @@ bindsym {{ keymap_move_window_down }} move down
 bindsym {{ keymap_move_window_left }} move left
 bindsym {{ keymap_move_window_right }} move right
 
-# set keymap for toggle floating/tiling mode of  currently-focused window
+# set keymap for toggle floating/tiling mode of currently-focused window
 bindsym {{ keymap_toggle_window_floating }} floating toggle
 
 # set keymap for toggle focus between floating/tiling windows
@@ -142,8 +142,8 @@ mode "resize" {
 }
 bindsym {{ keymap_resize_window }} mode "resize"
 
-# set keymap for launch-terminal-emulator
-bindsym {{ keymap_launch_term_emulator }} exec --no-startup-id "{{ cmd_start_term_emulator }}"
+# set keymap for launch-terminal-emulator in tabbed-mode, as container sibling
+bindsym {{ keymap_launch_term_emulator }} layout tabbed; exec --no-startup-id "{{ cmd_start_term_emulator }}"
 
 # set keymap for starting the terminal emulator in a special dropdown instance
 exec --no-startup-id "{{ cmd_start_term_emulator }} {{ cmd_arg_term_emulator_class }}wm_dropdown_term"
@@ -190,7 +190,7 @@ bar {
 
 # start all optional user-defined commands
 {% for cmd in cmds_user_utilities %}
-{{ '# '  }}{{ cmd.descrip }}
+{{ '# ' }}{{ cmd.descrip }}
 {{ 'exec --no-startup-id "' }}{{ cmd.cmd_start }}{{ '"' }}
 {% endfor %}
 
