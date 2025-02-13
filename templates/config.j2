@@ -53,6 +53,23 @@ set $workspace13 "{{ workspace_labels.workspace_13 }}"
 set $workspace14 "{{ workspace_labels.workspace_14 }}"
 set $workspace15 "{{ workspace_labels.workspace_15 }}"
 
+# assign monitors to workspaces
+workspace $workspace1 output "{{ i3wm_monitor_for_workspace_1 }}"
+workspace $workspace2 output "{{ i3wm_monitor_for_workspace_2 }}"
+workspace $workspace3 output "{{ i3wm_monitor_for_workspace_3 }}"
+workspace $workspace4 output "{{ i3wm_monitor_for_workspace_4 }}"
+workspace $workspace5 output "{{ i3wm_monitor_for_workspace_5 }}"
+workspace $workspace6 output "{{ i3wm_monitor_for_workspace_6 }}"
+workspace $workspace7 output "{{ i3wm_monitor_for_workspace_7 }}"
+workspace $workspace8 output "{{ i3wm_monitor_for_workspace_8 }}"
+workspace $workspace9 output "{{ i3wm_monitor_for_workspace_9 }}"
+workspace $workspace10 output "{{ i3wm_monitor_for_workspace_10 }}"
+workspace $workspace11 output "{{ i3wm_monitor_for_workspace_11 }}"
+workspace $workspace12 output "{{ i3wm_monitor_for_workspace_12 }}"
+workspace $workspace13 output "{{ i3wm_monitor_for_workspace_13 }}"
+workspace $workspace14 output "{{ i3wm_monitor_for_workspace_14 }}"
+workspace $workspace15 output "{{ i3wm_monitor_for_workspace_15 }}"
+
 # configure auto-previous-workspace switching
 workspace_auto_back_and_forth {{ 'yes' if auto_prev_workspace_switch else 'no' }}
 

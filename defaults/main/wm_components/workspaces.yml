@@ -16,6 +16,27 @@ workspace_labels:
   workspace_14: 'E'
   workspace_15: 'F'
 
+# primary monitor ID (use monitor ID output name from xrandr)
+# by default, this monitor will have all workspaces assigned to it
+i3wm_primary_monitor_id: 'primary'
+
+# monitors for workspaces (use monitor ID output name from xrandr)
+i3wm_monitor_id_for_workspace_1: 'primary'
+i3wm_monitor_id_for_workspace_2: 'primary'
+i3wm_monitor_id_for_workspace_3: 'primary'
+i3wm_monitor_id_for_workspace_4: 'primary'
+i3wm_monitor_id_for_workspace_5: 'primary'
+i3wm_monitor_id_for_workspace_6: 'primary'
+i3wm_monitor_id_for_workspace_7: 'primary'
+i3wm_monitor_id_for_workspace_8: 'primary'
+i3wm_monitor_id_for_workspace_9: 'primary'
+i3wm_monitor_id_for_workspace_10: 'primary'
+i3wm_monitor_id_for_workspace_11: 'primary'
+i3wm_monitor_id_for_workspace_12: 'primary'
+i3wm_monitor_id_for_workspace_13: 'primary'
+i3wm_monitor_id_for_workspace_14: 'primary'
+i3wm_monitor_id_for_workspace_15: 'primary'
+
 # switch to prev workspace on attempt to switch to same workspace twice
 auto_prev_workspace_switch: true
 
