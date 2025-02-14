@@ -42,8 +42,8 @@ auto_prev_workspace_switch: true
 
 # keymap for switch-to-last-used-workspace
 keymaps_switch_to_prev_workspace:
-  -'$mod+Super_L'
-  -'$mod+Super_R'
+  - '$mod+Super_L'
+  - '$mod+Super_R'
 
 # keymaps for "switch to workspace X"
 keymap_switch_to_workspace_1: '$mod+q'
