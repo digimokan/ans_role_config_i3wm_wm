@@ -10,15 +10,15 @@ keymap_dec_screen_brightness: "{{ i3wm_super_key }}+Shift+j"
 cmd_play_pause_audio_media: "{{ no_op_cmd }}"
 
 # keymap for play/pause audio media
-keymap_play_pause_audio_media: 'Print'
+keymap_play_pause_audio_media: 'XF86AudioPlay'
 
 # commands for adjusting sound volume
 cmd_inc_volume: "{{ no_op_cmd }}"
 cmd_dec_volume: "{{ no_op_cmd }}"
 
 # keymaps for adjusting sound volume
-keymap_inc_volume: 'Pause'
-keymap_dec_volume: 'Scroll_Lock'
+keymap_inc_volume: 'XF86AudioRaiseVolume'
+keymap_dec_volume: 'XF86AudioLowerVolume'
 
 # command to run to capture png screenshot
 cmd_capture_png_screenshot: "{{ no_op_cmd }}"
