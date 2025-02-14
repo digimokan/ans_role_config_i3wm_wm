@@ -42,40 +42,40 @@ auto_prev_workspace_switch: true
 
 # keymap for switch-to-last-used-workspace
 keymaps_switch_to_prev_workspace:
-  - '$mod+Super_L'
-  - '$mod+Super_R'
+  - "{{ i3wm_super_key }}+Super_L"
+  - "{{ i3wm_super_key }}+Super_R"
 
 # keymaps for "switch to workspace X"
-keymap_switch_to_workspace_1: '$mod+q'
-keymap_switch_to_workspace_2: '$mod+w'
-keymap_switch_to_workspace_3: '$mod+e'
-keymap_switch_to_workspace_4: '$mod+r'
-keymap_switch_to_workspace_5: '$mod+t'
-keymap_switch_to_workspace_6: '$mod+a'
-keymap_switch_to_workspace_7: '$mod+s'
-keymap_switch_to_workspace_8: '$mod+d'
-keymap_switch_to_workspace_9: '$mod+f'
-keymap_switch_to_workspace_10: '$mod+g'
-keymap_switch_to_workspace_11: '$mod+z'
-keymap_switch_to_workspace_12: '$mod+x'
-keymap_switch_to_workspace_13: '$mod+c'
-keymap_switch_to_workspace_14: '$mod+v'
-keymap_switch_to_workspace_15: '$mod+b'
+keymap_switch_to_workspace_1: "{{ i3wm_super_key }}+q"
+keymap_switch_to_workspace_2: "{{ i3wm_super_key }}+w"
+keymap_switch_to_workspace_3: "{{ i3wm_super_key }}+e"
+keymap_switch_to_workspace_4: "{{ i3wm_super_key }}+r"
+keymap_switch_to_workspace_5: "{{ i3wm_super_key }}+t"
+keymap_switch_to_workspace_6: "{{ i3wm_super_key }}+a"
+keymap_switch_to_workspace_7: "{{ i3wm_super_key }}+s"
+keymap_switch_to_workspace_8: "{{ i3wm_super_key }}+d"
+keymap_switch_to_workspace_9: "{{ i3wm_super_key }}+f"
+keymap_switch_to_workspace_10: "{{ i3wm_super_key }}+g"
+keymap_switch_to_workspace_11: "{{ i3wm_super_key }}+z"
+keymap_switch_to_workspace_12: "{{ i3wm_super_key }}+x"
+keymap_switch_to_workspace_13: "{{ i3wm_super_key }}+c"
+keymap_switch_to_workspace_14: "{{ i3wm_super_key }}+v"
+keymap_switch_to_workspace_15: "{{ i3wm_super_key }}+b"
 
 # keymaps for "move currently-focused container to workspace X"
-keymap_move_to_workspace_1: 'Alt+q'
-keymap_move_to_workspace_2: 'Alt+w'
-keymap_move_to_workspace_3: 'Alt+e'
-keymap_move_to_workspace_4: 'Alt+r'
-keymap_move_to_workspace_5: 'Alt+t'
-keymap_move_to_workspace_6: 'Alt+a'
-keymap_move_to_workspace_7: 'Alt+s'
-keymap_move_to_workspace_8: 'Alt+d'
-keymap_move_to_workspace_9: 'Alt+f'
-keymap_move_to_workspace_10: 'Alt+g'
-keymap_move_to_workspace_11: 'Alt+z'
-keymap_move_to_workspace_12: 'Alt+x'
-keymap_move_to_workspace_13: 'Alt+c'
-keymap_move_to_workspace_14: 'Alt+v'
-keymap_move_to_workspace_15: 'Alt+b'
+keymap_move_to_workspace_1: "Alt+q"
+keymap_move_to_workspace_2: "Alt+w"
+keymap_move_to_workspace_3: "Alt+e"
+keymap_move_to_workspace_4: "Alt+r"
+keymap_move_to_workspace_5: "Alt+t"
+keymap_move_to_workspace_6: "Alt+a"
+keymap_move_to_workspace_7: "Alt+s"
+keymap_move_to_workspace_8: "Alt+d"
+keymap_move_to_workspace_9: "Alt+f"
+keymap_move_to_workspace_10: "Alt+g"
+keymap_move_to_workspace_11: "Alt+z"
+keymap_move_to_workspace_12: "Alt+x"
+keymap_move_to_workspace_13: "Alt+c"
+keymap_move_to_workspace_14: "Alt+v"
+keymap_move_to_workspace_15: "Alt+b"
 

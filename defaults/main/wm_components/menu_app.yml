@@ -2,5 +2,5 @@
 cmd_launch_app_menu: "{{ no_op_cmd }}"
 
 # keymap for launching application-selection menu
-keymap_launch_app_menu: '$mod+space'
+keymap_launch_app_menu: "{{ i3wm_super_key }}+space"
 

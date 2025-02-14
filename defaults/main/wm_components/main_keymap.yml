@@ -1,4 +1,6 @@
-# main 'Mod' key to hold when entering keymaps (listed as '$mod' in keymaps)
-# available keys: 'Super', 'Alt'
-main_keymap_mod_key: 'Super'
+# i3wm keymaps use the "Mod4" symbol for the Super key
+i3wm_super_key: 'Mod4'
+
+# i3wm keymaps use the "Mod1" symbol for the Alt key
+i3wm_alt_key: 'Mod1'
 

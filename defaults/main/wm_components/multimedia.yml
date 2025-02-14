@@ -3,8 +3,8 @@ cmd_inc_screen_brightness: "{{ no_op_cmd }}"
 cmd_dec_screen_brightness: "{{ no_op_cmd }}"
 
 # keymaps for adjusting screen brightness
-keymap_inc_screen_brightness: '$mod+Shift+k'
-keymap_dec_screen_brightness: '$mod+Shift+j'
+keymap_inc_screen_brightness: "{{ i3wm_super_key }}+Shift+k"
+keymap_dec_screen_brightness: "{{ i3wm_super_key }}+Shift+j"
 
 # command to run to play/pause audio media
 cmd_play_pause_audio_media: "{{ no_op_cmd }}"
@@ -30,5 +30,5 @@ screenshot_png_save_dir: "/home/{{ i3_user_name }}"
 screenshot_png_file_name: '$(date +%F-%T).png'
 
 # keymap for capture-png-screenshot
-keymap_capture_png_screenshot: '$mod+p'
+keymap_capture_png_screenshot: "{{ i3wm_super_key }}+p"
 

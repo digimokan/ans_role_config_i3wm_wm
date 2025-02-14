@@ -3,42 +3,42 @@
 default_workspace_container_layout: 'tabbed'
 
 # change container layout to stacked, tabbed, toggle-v/h-tile, or fullscreen
-keymap_container_stacked: '$mod+o'
-keymap_container_tabbed: '$mod+u'
-keymap_container_tile: '$mod+i'
-keymap_toggle_fullscreen: '$mod+y'
+keymap_container_stacked: "{{ i3wm_super_key }}+o"
+keymap_container_tabbed: "{{ i3wm_super_key }}+u"
+keymap_container_tile: "{{ i3wm_super_key }}+i"
+keymap_toggle_fullscreen: "{{ i3wm_super_key }}+y"
 
 # create parent container node and make current window its child, and make the
 # container's (new) windows oriented vertically/horizontally/toggle
-keymap_set_tiling_vertical: '$mod+Control+v'
-keymap_set_tiling_horizontal: '$mod+Control+s'
-keymap_set_tiling_toggle: '$mod+Control+t'
+keymap_set_tiling_vertical: "{{ i3wm_super_key }}+Control+v"
+keymap_set_tiling_horizontal: "{{ i3wm_super_key }}+Control+s"
+keymap_set_tiling_toggle: "{{ i3wm_super_key }}+Control+t"
 
 # focus on parent/child container of current >>container<<
-keymap_focus_parent_container: '$mod+comma'
-keymap_focus_child_container: '$mod+period'
+keymap_focus_parent_container: "{{ i3wm_super_key }}+comma"
+keymap_focus_child_container: "{{ i3wm_super_key }}+period"
 
 # kill currently focused window
-keymap_kill_focused_window: '$mod+Tab'
+keymap_kill_focused_window: "{{ i3wm_super_key }}+Tab"
 
 # focus to window in current worksp (directionally, >>across<< containers)
-keymap_focus_up: '$mod+k'
-keymap_focus_down: '$mod+j'
-keymap_focus_left: '$mod+h'
-keymap_focus_right: '$mod+l'
+keymap_focus_up: "{{ i3wm_super_key }}+k"
+keymap_focus_down: "{{ i3wm_super_key }}+j"
+keymap_focus_left: "{{ i3wm_super_key }}+h"
+keymap_focus_right: "{{ i3wm_super_key }}+l"
 
 # move (i.e. reposition) focused window directionally inside/across containers
-keymap_move_window_up: '$mod+Up'
-keymap_move_window_down: '$mod+Down'
-keymap_move_window_left: '$mod+Left'
-keymap_move_window_right: '$mod+Right'
+keymap_move_window_up: "{{ i3wm_super_key }}+Up"
+keymap_move_window_down: "{{ i3wm_super_key }}+Down"
+keymap_move_window_left: "{{ i3wm_super_key }}+Left"
+keymap_move_window_right: "{{ i3wm_super_key }}+Right"
 
 # enter/exit floating mode for currently focused window
-keymap_toggle_window_floating: '$mod+m'
+keymap_toggle_window_floating: "{{ i3wm_super_key }}+m"
 
 # change focus between tiling / floating windows
-keymap_toggle_focus_floating: '$mod+n'
+keymap_toggle_focus_floating: "{{ i3wm_super_key }}+n"
 
 # resize window (you can also use the mouse for this)
-keymap_resize_window: '$mod+equal'
+keymap_resize_window: "{{ i3wm_super_key }}+equal"
 

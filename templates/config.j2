@@ -3,6 +3,9 @@
 #   {{ system_default_config_path }}
 # Upstream config source:
 #   https://github.com/i3/i3/blob/next/etc/config
+# Keymap Notes:
+#   i3wm keymaps use the "Mod4" symbol for the Super key
+#   i3wm keymaps use the "Mod1" symbol for the Alt key
 # Exact version line required for newer i3 versions to start properly:
 # i3 config file (v4)
 
@@ -32,9 +35,6 @@ client.background       $bg-color           $bg-color          $bg-color        
 
 # configure hiding of window screen edge borders
 hide_edge_borders {{ 'both' if hide_window_outer_borders else 'smart' }}
-
-# set the main keymap 'Mod' key
-set $mod {{ 'Mod4' if (main_keymap_mod_key == 'Super') else 'Mod1' }}
 
 # set workspace labels
 set $workspace1 "{{ workspace_labels.workspace_1 }}"
@@ -176,7 +176,7 @@ for_window [class="dropdown_term"] move position 0 px 5 px
 for_window [class="dropdown_term"] resize set 100 ppt 80 ppt
 for_window [class="dropdown_term"] move scratchpad
 for_window [class="dropdown_term"] border none
-bindsym $mod+Next [class="wm_dropdown_term"] scratchpad show
+bindsym {{ keymap_toggle_dropdown_term }} [class="wm_dropdown_term"] scratchpad show
 
 # set keymap for launch-application-selection-menu
 bindsym {{ keymap_launch_app_menu }} exec "{{ cmd_launch_app_menu }}"

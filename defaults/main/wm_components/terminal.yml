@@ -5,8 +5,8 @@ cmd_start_term_emulator: "{{ no_op_cmd }}"
 cmd_arg_term_emulator_class: "--class "
 
 # keymap for launching a terminal emulator
-keymap_launch_term_emulator: '$mod+Delete'
+keymap_launch_term_emulator: "{{ i3wm_super_key }}+Delete"
 
 # keymap for toggle show/hide of terminal emulator in special dropdown instance
-keymap_toggle_dropdown_term: '$mod+Next'
+keymap_toggle_dropdown_term: "{{ i3wm_super_key }}+Next"
 
