@@ -41,7 +41,9 @@ i3wm_monitor_id_for_workspace_15: 'primary'
 auto_prev_workspace_switch: true
 
 # keymap for switch-to-last-used-workspace
-keymap_switch_to_prev_workspace: '$mod+BackSpace'
+keymaps_switch_to_prev_workspace:
+  -'$mod+Super_L'
+  -'$mod+Super_R'
 
 # keymaps for "switch to workspace X"
 keymap_switch_to_workspace_1: '$mod+q'

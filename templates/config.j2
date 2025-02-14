@@ -73,8 +73,10 @@ workspace $workspace15 output "{{ i3wm_primary_monitor_id if (i3wm_monitor_id_fo
 # configure auto-previous-workspace switching
 workspace_auto_back_and_forth {{ 'yes' if auto_prev_workspace_switch else 'no' }}
 
-# set keymap for switch-to-previous-workspace
-bindsym {{ keymap_switch_to_prev_workspace }} workspace back_and_forth
+# set keymaps for switch-to-previous-workspace
+{% for keymap in keymaps_switch_to_prev_workspace %}
+bindsym {{ keymap }} workspace back_and_forth
+{% endfor %}
 
 # set keymaps for switch-to-workspace-x
 bindsym {{ keymap_switch_to_workspace_1 }} workspace $workspace1
