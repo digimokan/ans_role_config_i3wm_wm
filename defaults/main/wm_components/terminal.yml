@@ -8,5 +8,5 @@ cmd_arg_term_emulator_class: "--class "
 keymap_launch_term_emulator: "{{ i3wm_super_key }}+Delete"
 
 # keymap for toggle show/hide of terminal emulator in special dropdown instance
-keymap_toggle_dropdown_term: "{{ i3wm_super_key }}+Next"
+keymap_toggle_dropdown_term: "{{ i3wm_super_key }}+BackSpace"
 
