@@ -9,10 +9,10 @@ i3bar_bg_color: '#292C33'
 
 # colors for workspace items
 i3bar_workspace_colors:
-  active_bkgnd: '#292C33'
-  idling_bkgnd: '#1F1F1F'
+  active_bkgnd: '#004B49'
+  idling_bkgnd: '#292C33'
   urgent_bkgnd: '#AA3935'
-  active_label: '#B9B9BA'
+  active_label: '#ECECEC'
   idling_label: '#676E7D'
   urgent_label: '#F3F4F5'
   item_borders: '#005E68'
