@@ -13,7 +13,7 @@ i3bar_workspace_colors:
   idling_bkgnd: '#292C33'
   urgent_bkgnd: '#AA3935'
   active_label: '#ECECEC'
-  idling_label: '#DFDFE0'
+  idling_label: '#676E7D'
   urgent_label: '#F3F4F5'
   item_borders: '#005E68'
 
